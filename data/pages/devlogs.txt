@@ -1,0 +1,7 @@
+====== DEV LOGS ======
+
+Here are the dev logs when I care to write them......<wrap em><wrap lo>Turns out right?</wrap> <wrap hi>ITS NOT</wrap></wrap>
+
+
+{{indexmenu>devlogs#1|navbar context dsort rsort}}
+

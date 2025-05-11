@@ -1,0 +1,84 @@
+
+<h1 class="sectionedit1" id="sunday_may_1st_2022">Sunday, May 1st 2022</h1>
+<div class="level1">
+
+<p>
+Still following this <a href="https://mbuffett.com/posts/bevy-snake-tutorial/" class="urlextern" title="https://mbuffett.com/posts/bevy-snake-tutorial/" rel="ugc nofollow"> tutorial</a>. 
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Sunday, May 1st 2022&quot;,&quot;hid&quot;:&quot;sunday_may_1st_2022&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-123&quot;} -->
+<h3 class="sectionedit2" id="shit">Shit</h3>
+<div class="level3">
+<pre class="code rust"><span class="kw1">fn</span> position_translation<span class="br0">&#40;</span>windows<span class="sy0">:</span> Res<span class="sy0">&lt;</span>Windows<span class="sy0">&gt;,</span> <span class="kw1">mut</span> q<span class="sy0">:</span> Query<span class="sy0">&lt;</span><span class="br0">&#40;</span><span class="sy0">&amp;</span><span class="kw4">Position</span><span class="sy0">,</span> <span class="sy0">&amp;</span><span class="kw1">mut</span> Transform<span class="br0">&#41;</span><span class="sy0">&gt;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    <span class="kw1">fn</span> convert<span class="br0">&#40;</span>pos<span class="sy0">:</span> <span class="kw3">f32</span><span class="sy0">,</span> bound_window<span class="sy0">:</span> <span class="kw3">f32</span><span class="sy0">,</span> bound_game<span class="sy0">:</span> <span class="kw3">f32</span><span class="br0">&#41;</span> <span class="sy0">-&gt;</span> <span class="kw3">f32</span> <span class="br0">&#123;</span>
+        <span class="kw1">let</span> tile_size <span class="sy0">=</span> bound_window <span class="sy0">/</span> bound_game<span class="sy0">;</span>
+        pos <span class="sy0">/</span> bound_game <span class="sy0">*</span> bound_window <span class="sy0">-</span> <span class="br0">&#40;</span>bound_window <span class="sy0">/</span> <span class="nu0">2</span>.<span class="br0">&#41;</span> <span class="sy0">+</span> <span class="br0">&#40;</span>tile_size <span class="sy0">/</span> <span class="nu0">2</span>.<span class="br0">&#41;</span>
+    <span class="br0">&#125;</span>
+    <span class="kw1">let</span> window <span class="sy0">=</span> windows.get_primary<span class="br0">&#40;</span><span class="br0">&#41;</span>.unwrap<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="kw1">for</span> <span class="br0">&#40;</span>pos<span class="sy0">,</span> <span class="kw1">mut</span> transform<span class="br0">&#41;</span> <span class="kw1">in</span> q.iter_mut<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+        transform.translation <span class="sy0">=</span> Vec3<span class="sy0">::</span><span class="me1">new</span><span class="br0">&#40;</span>
+            convert<span class="br0">&#40;</span>pos.x <span class="kw1">as</span> <span class="kw3">f32</span><span class="sy0">,</span> window.width<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="kw1">as</span> <span class="kw3">f32</span><span class="sy0">,</span> ARENA_WIDTH <span class="kw1">as</span> <span class="kw3">f32</span><span class="br0">&#41;</span><span class="sy0">,</span>
+            convert<span class="br0">&#40;</span>pos.y <span class="kw1">as</span> <span class="kw3">f32</span><span class="sy0">,</span> window.height<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="kw1">as</span> <span class="kw3">f32</span><span class="sy0">,</span> ARENA_HEIGHT <span class="kw1">as</span> <span class="kw3">f32</span><span class="br0">&#41;</span><span class="sy0">,</span>
+            <span class="nu16">0.0</span><span class="sy0">,</span>
+        <span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre>
+<!-- EDIT{&quot;target&quot;:&quot;plugin_wrap_start&quot;,&quot;secid&quot;:3,&quot;range&quot;:&quot;0-&quot;} --><div class="wrap_lo plugin_wrap">
+<p>
+ explination from the dood <sup><a href="#fn__1" id="fnt__1" class="fn_top">1)</a></sup>. 
+</p>
+</div><!-- EDIT{&quot;target&quot;:&quot;plugin_wrap_end&quot;,&quot;secid&quot;:4,&quot;range&quot;:&quot;0-&quot;} -->
+<p>
+The position translation: if an item’s x coordinate is at 5 in our system, the width in our system is 10, and the window width is 200, then the coordinate should be 5 / 10 * 200 - 200 / 2. We subtract half the window width because our coordinate system starts at the bottom left, and Translation starts from the center. We then add half the size of a single tile, because we want our sprites bottom left corner to be at the bottom left of a tile, not the center.
+</p>
+
+<p>
+<a href="/Projects/ultraletterlinker/lib/exe/fetch.php?media=devlogs:snaketut.png" class="media" title="devlogs:snaketut.png"><img src="/Projects/ultraletterlinker/lib/exe/fetch.php?w=600&amp;tok=8abcae&amp;media=devlogs:snaketut.png" class="media" alt="" width="600" /></a>
+lol.jpg
+<br/>
+
+</p>
+<pre class="code rust"><span class="kw1">fn</span> spawn_segment<span class="br0">&#40;</span><span class="kw1">mut</span> commands<span class="sy0">:</span> Commands<span class="sy0">,</span> position<span class="sy0">:</span> <span class="kw4">Position</span><span class="br0">&#41;</span> <span class="sy0">-&gt;</span> Entity <span class="br0">&#123;</span>
+    commands
+        .spawn_bundle<span class="br0">&#40;</span>SpriteBundle<span class="br0">&#123;</span>
+            sprite<span class="sy0">:</span> Sprite<span class="br0">&#123;</span>
+                color<span class="sy0">:</span> SNAKE_SEGMENT_COLOR<span class="sy0">,</span>
+                ..default<span class="br0">&#40;</span><span class="br0">&#41;</span>
+            <span class="br0">&#125;</span><span class="sy0">,</span>
+            ..default<span class="br0">&#40;</span><span class="br0">&#41;</span>
+        <span class="br0">&#125;</span><span class="br0">&#41;</span>
+        .insert<span class="br0">&#40;</span>SnakeSegment<span class="br0">&#41;</span>
+        .insert<span class="br0">&#40;</span>position<span class="br0">&#41;</span>
+        .insert<span class="br0">&#40;</span>Size<span class="sy0">::</span><span class="me1">square</span><span class="br0">&#40;</span><span class="nu16">0.65</span><span class="br0">&#41;</span><span class="br0">&#41;</span>
+        .id<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="co0">// This is the entity as it is essentially an ID that connects some data together</span>
+<span class="br0">&#125;</span></pre>
+
+<p>
+The above code is interesting as its returning an Entity, which is done with accessing the id() from the spawned spritebundle. <br/>
+
+</p>
+<!-- EDIT{&quot;target&quot;:&quot;plugin_wrap_start&quot;,&quot;secid&quot;:5,&quot;range&quot;:&quot;0-&quot;} --><div class="wrap_left wrap_important plugin_wrap" style="width: 60%;">
+<p>
+The entity is essentially an ID that connects some data together
+</p>
+</div><!-- EDIT{&quot;target&quot;:&quot;plugin_wrap_end&quot;,&quot;secid&quot;:6,&quot;range&quot;:&quot;0-&quot;} -->
+<p>
+<br/>
+
+<br/>
+
+<br/>
+ggs
+<br/>
+
+<br/>
+
+Yea this is sloooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooow 🤞🤞🤞🤞 on actually understanding this stuff better.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Shit&quot;,&quot;hid&quot;:&quot;shit&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;124-&quot;} --><div class="footnotes">
+<div class="fn"><sup><a href="#fnt__1" id="fn__1" class="fn_bot">1)</a></sup> 
+<div class="content">the person whom wrote the tutorial</div></div>
+</div>

@@ -1,0 +1,2 @@
+#<span class="br0">&#91;</span>derive<span class="br0">&#40;</span>Component<span class="br0">&#41;</span><span class="br0">&#93;</span>
+<span class="kw1">struct</span> Person<span class="sy0">;</span>

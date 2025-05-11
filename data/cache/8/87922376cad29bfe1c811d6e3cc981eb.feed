@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.8" -->
+<?xml-stylesheet href="https://www.quackypaddy.com/Projects/ultraletterlinker/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="https://www.quackypaddy.com/Projects/ultraletterlinker/feed.php">
+        <title>Ultra Letter Linker</title>
+        <description></description>
+        <link>https://www.quackypaddy.com/Projects/ultraletterlinker/</link>
+        <image rdf:resource="https://www.quackypaddy.com/Projects/ultraletterlinker/lib/exe/fetch.php?media=wiki:favicon.ico" />
+       <dc:date>2025-04-06T21:51:56+00:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="https://www.quackypaddy.com/Projects/ultraletterlinker/doku.php?id=dandymaloo&amp;rev=1697747128&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.quackypaddy.com/Projects/ultraletterlinker/doku.php?id=devlogs&amp;rev=1697747128&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.quackypaddy.com/Projects/ultraletterlinker/doku.php?id=simeon&amp;rev=1697747128&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.quackypaddy.com/Projects/ultraletterlinker/doku.php?id=start&amp;rev=1697747128&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.quackypaddy.com/Projects/ultraletterlinker/doku.php?id=superletterlinker&amp;rev=1697747128&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="https://www.quackypaddy.com/Projects/ultraletterlinker/lib/exe/fetch.php?media=wiki:favicon.ico">
+        <title>Ultra Letter Linker</title>
+        <link>https://www.quackypaddy.com/Projects/ultraletterlinker/</link>
+        <url>https://www.quackypaddy.com/Projects/ultraletterlinker/lib/exe/fetch.php?media=wiki:favicon.ico</url>
+    </image>
+    <item rdf:about="https://www.quackypaddy.com/Projects/ultraletterlinker/doku.php?id=dandymaloo&amp;rev=1697747128&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2023-10-19T15:25:28+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>dandymaloo</title>
+        <link>https://www.quackypaddy.com/Projects/ultraletterlinker/doku.php?id=dandymaloo&amp;rev=1697747128&amp;do=diff</link>
+        <description>Dandy Maloo
+
+Why hi there! I'm Dandy Maloo! The most rootin tootinest horse around 🐱‍👓.  
+
+Theres a few things I like in life. Rootin, Tootin, Snax and cuddles with my mama.
+
+ Yes thats right I am world famous author of Have a rooting tootin christmas picturebook I wrote it one day when I thought about books and how cool it would be for me dandy maloo to have one so I wrote the book and printed it while thinking of snacks that I would get cause thats dandy maloo style eating snacks of plates and…</description>
+    </item>
+    <item rdf:about="https://www.quackypaddy.com/Projects/ultraletterlinker/doku.php?id=devlogs&amp;rev=1697747128&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2023-10-19T15:25:28+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>devlogs</title>
+        <link>https://www.quackypaddy.com/Projects/ultraletterlinker/doku.php?id=devlogs&amp;rev=1697747128&amp;do=diff</link>
+        <description>DEV LOGS
+
+Here are the dev logs when I care to write them......Turns out right? ITS NOT
+devlogs index</description>
+    </item>
+    <item rdf:about="https://www.quackypaddy.com/Projects/ultraletterlinker/doku.php?id=simeon&amp;rev=1697747128&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2023-10-19T15:25:28+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>simeon</title>
+        <link>https://www.quackypaddy.com/Projects/ultraletterlinker/doku.php?id=simeon&amp;rev=1697747128&amp;do=diff</link>
+        <description>Simeon
+
+Hi This is a page for Simeon! He is half French baker, but mostly a tuxedo cat. He loves his mom, biting, toys and food. He is a good good boy
+
+Simeon quotes
+
+ -“I Love food and mummies.”
+
+ -“DANDY IS STINKY!”</description>
+    </item>
+    <item rdf:about="https://www.quackypaddy.com/Projects/ultraletterlinker/doku.php?id=start&amp;rev=1697747128&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2023-10-19T15:25:28+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>start</title>
+        <link>https://www.quackypaddy.com/Projects/ultraletterlinker/doku.php?id=start&amp;rev=1697747128&amp;do=diff</link>
+        <description>ULTRA Letter Linker
+
+
+
+This is hopefully the start of great things!! 💖💖
+
+2 + 2 is 4 minus 1 that's 3
+
+Quick Links
+
+Original Super letter linker
+
+ devlogs (Some bad writings) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+About the authors: 
+
+ IM SIMEOOOON 
+
+ ms.Dandy maloo</description>
+    </item>
+    <item rdf:about="https://www.quackypaddy.com/Projects/ultraletterlinker/doku.php?id=superletterlinker&amp;rev=1697747128&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2023-10-19T15:25:28+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>superletterlinker</title>
+        <link>https://www.quackypaddy.com/Projects/ultraletterlinker/doku.php?id=superletterlinker&amp;rev=1697747128&amp;do=diff</link>
+        <description>| ooopsyyy your supposed to actually be on the page that this text links to!! so please go there by using your mouse to place the cursor somewhere over this text and then left click. If for some reason you feel extra hoiyty toity then hold shift while left clicking to open it in a new tab I think..</description>
+    </item>
+</rdf:RDF>

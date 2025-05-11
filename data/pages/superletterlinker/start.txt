@@ -1,0 +1,30 @@
+====== Super Letter Linker =======
+
+This page will document the break down of the original Super Letter Linker developed by GameHouse Games in 2003
+
+{{indexmenu>:superletterlinker#1|navbar context}}
+
+==== Description ====
+<wrap lo>taken from [[https://www.gamefools.com/pc-games/super-letter-linker.html | gamefools.com]] </wrap>
+\\
+\\ 
+Try this brain-busting word game, where you click the letter wafers to spell a variety of words in all directions. Super Letter Linker requires lightning-fast mental reflexes to find all the words before time is up. Form words in all directions to launch to the next level, or try the find-all mode where you must find every word on the board to move on.
+
+{{:superletterlinker:original_letterlinker_120x90.gif?nolink|}}
+
+==== Modes ====
+
+__Timed mode__
+
+2 mins to reach a target score. Once score is reached the player will continue till timer expires.
+The player fails if they do not reach the target file by the 2 min limit.
+
+__Find All Words__
+
+No time limit. Time counts upwards
+Player must find all the words to move on.
+Words are ordered by length and alphabetically
+
+
+
+

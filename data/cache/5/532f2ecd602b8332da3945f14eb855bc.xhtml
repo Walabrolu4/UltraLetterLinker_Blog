@@ -1,0 +1,112 @@
+
+<h1 class="sectionedit1" id="sunday_may_15th_2022">Sunday, May 15th 2022</h1>
+<div class="level1">
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Sunday, May 15th 2022&quot;,&quot;hid&quot;:&quot;sunday_may_15th_2022&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-37&quot;} -->
+<h3 class="sectionedit2" id="k">k</h3>
+<div class="level3">
+
+<p>
+have you play this game? <a href="https://store.steampowered.com/app/1154810/Going_Under/" class="urlextern" title="https://store.steampowered.com/app/1154810/Going_Under/" rel="ugc nofollow">this</a>. its pretty funny.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;k&quot;,&quot;hid&quot;:&quot;k&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;38-160&quot;} -->
+<h2 class="sectionedit3" id="collections">Collections</h2>
+<div class="level2">
+
+<p>
+Collections are like arrays or tuples whose size do not need to be known at compile time. The two types are
+</p>
+<ol>
+<li class="level1"><div class="li"> Vectors</div>
+</li>
+<li class="level1"><div class="li"> HashMap (like Dictionaries in c#)</div>
+</li>
+</ol>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Collections&quot;,&quot;hid&quot;:&quot;collections&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:3,&quot;range&quot;:&quot;161-346&quot;} -->
+<h3 class="sectionedit4" id="vectors">Vectors</h3>
+<div class="level3">
+
+<p>
+Vectors are resizable arrays whos length do not need to be known at compile time but the size of its type needs to be known.
+</p>
+
+<p>
+You can init a vector with the vec! macro. eg
+</p>
+<pre class="code rust"> <span class="kw1">let</span> x <span class="sy0">=</span> vec<span class="sy0">!</span><span class="br0">&#91;</span><span class="nu0">20</span><span class="sy0">,</span><span class="nu0">50</span><span class="sy0">,</span><span class="nu0">20</span><span class="br0">&#93;</span><span class="sy0">;</span> </pre>
+
+<p>
+You can access a certain element like <del>dish</del> <del>rish</del> <strong>this</strong>*
+</p>
+<pre class="code rust"> println<span class="sy0">!</span><span class="br0">&#40;</span><span class="st0">&quot;{}&quot;</span><span class="sy0">,</span>x<span class="br0">&#91;</span><span class="nu0">0</span><span class="br0">&#93;</span><span class="br0">&#41;</span><span class="sy0">;</span>  </pre>
+
+<p>
+You can iterate through every value like <del>dish</del> <del>rish</del> <strong>this</strong>* <sup><a href="#fn__1" id="fnt__1" class="fn_top">1)</a></sup>
+</p>
+
+<p>
+<a href="https://doc.rust-lang.org/stable/rust-by-example/std/vec.html" class="urlextern" title="https://doc.rust-lang.org/stable/rust-by-example/std/vec.html" rel="ugc nofollow">stolen from the rust by example book</a>
+</p>
+<pre class="code rust"><span class="co0">// `Vector`s can be easily iterated over</span>
+println<span class="sy0">!</span><span class="br0">&#40;</span><span class="st0">&quot;Contents of xs:&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">for</span> v <span class="kw1">in</span> x.iter<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+ println<span class="sy0">!</span><span class="br0">&#40;</span><span class="st0">&quot;&gt; {}&quot;</span><span class="sy0">,</span> x<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&nbsp;
+<span class="co0">// A `Vector` can also be iterated over while the iteration</span>
+<span class="co0">// count is enumerated in a separate variable (`i`)</span>
+<span class="kw1">for</span> <span class="br0">&#40;</span>i<span class="sy0">,</span> v<span class="br0">&#41;</span> <span class="kw1">in</span> x.iter<span class="br0">&#40;</span><span class="br0">&#41;</span>.enumerate<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+ println<span class="sy0">!</span><span class="br0">&#40;</span><span class="st0">&quot;In position {} we have value {}&quot;</span><span class="sy0">,</span> i<span class="sy0">,</span> x<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&nbsp;
+<span class="co0">// Thanks to `iter_mut`, mutable `Vector`s can also be iterated</span>
+<span class="co0">// over in a way that allows modifying each value</span>
+<span class="kw1">for</span> v <span class="kw1">in</span> xs.iter_mut<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+ <span class="sy0">*</span>v <span class="sy0">*=</span> <span class="nu0">3</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+println<span class="sy0">!</span><span class="br0">&#40;</span><span class="st0">&quot;Updated vector: {:?}&quot;</span><span class="sy0">,</span> xs<span class="br0">&#41;</span><span class="sy0">;</span></pre>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Vectors&quot;,&quot;hid&quot;:&quot;vectors&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:4,&quot;range&quot;:&quot;347-1448&quot;} -->
+<h3 class="sectionedit5" id="hashmap">HashMap</h3>
+<div class="level3">
+
+<p>
+Like dictionaries these use key value pairs. 
+</p>
+
+<p>
+To make one
+</p>
+<pre class="code rust"><span class="kw1">let</span> <span class="kw1">mut</span> name_and_age <span class="sy0">=</span> <span class="kw3">HashMap</span><span class="sy0">::</span><span class="me1">new</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&nbsp;
+name_and_age.insert<span class="br0">&#40;</span><span class="st0">&quot;Gassica&quot;</span><span class="sy0">,</span><span class="nu0">22</span><span class="br0">&#41;</span><span class="sy0">;</span>
+name_and_age.insert<span class="br0">&#40;</span><span class="st0">&quot;Alex&quot;</span><span class="sy0">,</span><span class="nu0">12</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&nbsp;
+name_and_age.get<span class="br0">&#40;</span><span class="st0">&quot;Alex&quot;</span><span class="br0">&#41;</span> <span class="co0">//ACCESSING THE VALUE</span></pre>
+
+<p>
+You can also insert “entry”
+</p>
+<pre class="code rust">name_and_age.entry<span class="br0">&#40;</span>String<span class="sy0">::</span><span class="me1">from</span><span class="br0">&#40;</span><span class="st0">&quot;thomas&quot;</span><span class="br0">&#41;</span><span class="br0">&#41;</span>.or_insert<span class="br0">&#40;</span><span class="nu0">20</span><span class="br0">&#41;</span><span class="sy0">;</span> <span class="co0">//Insert only if unique</span></pre>
+
+<p>
+which is bascially insert if unique. The aims to finish this by may atleast. (given I spend only a little time a week on it) will prollly do some exercizes thru the week without typing my noon-sense.<sup><a href="#fn__2" id="fnt__2" class="fn_top">2)</a></sup>.
+</p>
+
+<p>
+<a href="/Projects/ultraletterlinker/lib/exe/fetch.php?media=devlogs:rustlings_excersizes.png" class="media" title="devlogs:rustlings_excersizes.png"><img src="/Projects/ultraletterlinker/lib/exe/fetch.php?w=400&amp;tok=8d5989&amp;media=devlogs:rustlings_excersizes.png" class="media" alt="" width="400" /></a>
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;HashMap&quot;,&quot;hid&quot;:&quot;hashmap&quot;,&quot;codeblockOffset&quot;:3,&quot;secid&quot;:5,&quot;range&quot;:&quot;1449-&quot;} --><div class="footnotes">
+<div class="fn"><sup><a href="#fnt__1" id="fn__1" class="fn_bot">1)</a></sup> 
+<div class="content">haha, I&#039;m so quirky</div></div>
+<div class="fn"><sup><a href="#fnt__2" id="fn__2" class="fn_bot">2)</a></sup> 
+<div class="content">but typing this is fun fun fun fun</div></div>
+</div>

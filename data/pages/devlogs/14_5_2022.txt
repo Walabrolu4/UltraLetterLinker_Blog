@@ -1,0 +1,156 @@
+====== Saturday, May 15th 2022 ======
+
+==== Worked on a fyoo more rustlings excersizes ====
+
+I spent the weekday mostly working and doing other things so I try to spend a couple hours every weekend doing more rustling challenges as it still seems thats getting me to understand the basics of rust better. After I finish rustlings I will go back to looking at bevy. Maybe it will look less cryptic.
+
+==== Structs ====
+Structs hold a bunch of values like tuples. But a struct will have each piece of data named ie: **__key:value__** pairs. Structs are pretty powerful as there are no Classes in rust. Structs are used to make "Classes"  
+
+<code rust>
+struct Duck{
+ awesomeness:f32, //Basic values
+ name:(String), 
+ color:(u8,u8,u8), //Tuples can be stored
+ //I DONT THINK YOU CAN NEST ENUMS..... lmk bois
+}
+</code>
+
+To use a struct, you can access bits of it using the dot notation.
+<code rust>
+let dave = Duck{
+  awesomeness:100.0,
+  name: String::from("Dave"),
+  color:(255,255,0),
+};
+println!("{}",dave.name);
+</code>
+
+== Update syntaxx == 
+We (yes, both you and I) can make a new struct that has all the same values as another instance of a struct and then change whatever you want.
+
+<code rust>
+//Given the duck struct above and its instance of dave
+let david = {
+ name: String::from("Daveed"),
+ ..dave
+}
+</code>
+david is the same as dave except for his name! ((please note that this is true only on a surface level, as when we dive deeper we will find david and dave to be exeptionally unique ducks. Dave is a painter and David is a lover. Just like anyone. we are more than just our **__key:value__** pairs. We are **__key:value:feelings__** pears.))
+
+Structs can also have functions attached to it. using impl. 
+
+<code rust>
+impl Duck{
+ fn print_name(){
+ println!("{}",self.name);
+ }
+}
+</code>
+
+this is how you can make a class with structs. The Declaration of the struct is like a C++ header file and the impl like the cpp file ((not really)). 
+
+YOU caaaaaan also deconstruct structs but I didnt havtadoit for the exercises so idkfa.
+
+==== Enums ====
+
+Enums are another grouping of data. One major difference between enums and structs is that with structs you MUST initialize every value when you instance it. With an enum you can only pick one of its possible values while instancing. Usually its used when you have different options and can pick one(variants). [[https://github.com/rust-lang/rustlings/tree/main/exercises/enums|EG FROM THE BOOK]]
+
+<code rust>
+enum Message {
+    ChangeColor(u8,u8,u8),
+    Echo(String),
+    Move{x:u8,y:u8},
+    Quit,
+}
+</code>
+
+This enum has for variants and each one hold a different type. This way our one message enum can deal with many use cases rather than having different overloaded functions.
+
+We can use "matching" to go through every value (enumerate) and perform different actions based on the value matched.
+
+<code rust>
+ let message = Message::Quit;
+ match message{
+  Message::Move{x,y} => {self.move_position(Point{x,y});}
+  Message::Echo(message) => {self.echo(message);}
+  Message::ChangeColor(h,s,v) => {self.change_color((h,s,v));}
+  Message::Quit => {self.quit();}
+ }
+</code>
+
+**EZ PZZ** <wrap lo>probabbly more nuacnces than that tho</wrap> **squeeqzy**
+
+Matches must be **EXHAUSTIVE**.. or rust mama will yell.
+
+The two other special matching cases are __other__ and _____.
+
+[[https://doc.rust-lang.org/book/ch06-02-match.html| FR☺M THE RUST B☺☺K ]]
+
+<code rust>
+let dice_roll = 9;
+match dice_roll {
+ 3 => add_fancy_hat(),
+ 7 => remove_fancy_hat(),
+ other => move_player(other),
+}
+
+fn add_fancy_hat() {}
+fn remove_fancy_hat() {}
+fn move_player(num_spaces: u8) {}
+</code>
+Here the values 3 and 7 are covered. ALL OTHER VALUES ARE EVALUATED AS OTHER. We can also use _ which kind of does the same thing but will also work with values that are non-valid.
+<code rust> 
+let dice_roll = 9
+match dice_roll {
+ 3 => add_fancy_hat(),
+ 7 => remove_fancy_hat(),
+ _ => (), // the () is an empty tuple and basically says "Yo, mr.code don't do anything".
+}
+
+fn add_fancy_hat() {}
+fn remove_fancy_hat() {}
+</code>
+
+==== Modules ====
+
+Modules help break up code into reusable chunks. Kind of like namespaces.
+
+**A module is a collection of items: functions, structs, traits, impl and other modules.** 
+Creating a module [[https://github.com/rust-lang/rustlings/tree/main/exercises/modules| FROM RUSTLINGS]]
+
+<code rust>
+mod sausage_factory {
+ // Don't let anybody outside of this module see this!
+ fn get_secret_recipe() -> String {
+  String::from("Ginger")
+ }
+
+ pub fn make_sausage() {
+  get_secret_recipe();
+  println!("sausage!");
+ }
+}
+
+fn main() {
+    sausage_factory::make_sausage();
+}
+</code>
+
+Another thing we can do with modules is bring them into scope to use them with shorthand names. This can be done with the **use .. as** syntax.
+
+<code rust>
+use std::time::UNIX_EPOCH as UNIX_EPOCH;
+use std::time::SystemTime as SystemTime;
+
+fn main() {
+ match SystemTime::now().duration_since(UNIX_EPOCH) {
+  Ok(n) => println!("1970-01-01 00:00:00 UTC was {} seconds ago!", n.as_secs()),
+  Err(_) => panic!("SystemTime before UNIX EPOCH!"),
+ }
+}
+</code>
+
+Yea man thats basically about it... why are you (([[https://www.youtube.com/watch?v=2HOClc6Svg4|here]]))
+
+~~DISCUSSION | F's ~~

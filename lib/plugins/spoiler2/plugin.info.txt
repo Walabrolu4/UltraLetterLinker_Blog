@@ -1,0 +1,7 @@
+base   spoiler2
+author halbbit
+email  supp3@gmx.net
+date   2021-03-03
+name   Spoiler2 Plugin
+desc   Add <spoiler> tag, allowing sections that are initially hidden and can be made visible by clicking on a button. Another click will hide the spoiler again.
+url    https://www.dokuwiki.org/plugin:spoiler2

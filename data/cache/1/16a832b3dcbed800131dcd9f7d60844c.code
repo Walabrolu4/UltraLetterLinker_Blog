@@ -1,0 +1,1 @@
+<span class="kw1">let</span> i <span class="sy0">=</span> <span class="br0">&#40;</span><span class="nu16">2.0</span><span class="sy0">,</span><span class="st0">&quot;alex&quot;</span><span class="sy0">,</span><span class="kw2">false</span><span class="br0">&#41;</span><span class="sy0">;</span> <span class="co0">// () are how you initialize tuples.</span>

@@ -1,0 +1,4 @@
+<span class="kw1">let</span> vec0 <span class="sy0">=</span> Vec<span class="sy0">::</span><span class="me1">new</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">let</span> vec01 <span class="sy0">=</span> Vec<span class="sy0">::</span><span class="me1">mew</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span> <span class="co0">//make and use this vec instead</span>
+<span class="kw1">let</span> <span class="kw1">mut</span> vec1 <span class="sy0">=</span> fill_vec<span class="br0">&#40;</span>vec01<span class="br0">&#41;</span><span class="sy0">;</span>
+...

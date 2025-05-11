@@ -1,0 +1,9 @@
+<span class="kw1">pub</span> <span class="kw1">struct</span> HelloPlugin<span class="sy0">;</span>
+&nbsp;
+<span class="kw1">impl</span> Plugin <span class="kw1">for</span> HelloPlugin <span class="br0">&#123;</span>
+    <span class="kw1">fn</span> build<span class="br0">&#40;</span><span class="sy0">&amp;</span><span class="kw1">self</span><span class="sy0">,</span> app<span class="sy0">:</span> <span class="sy0">&amp;</span><span class="kw1">mut</span> App<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+        app.add_startup_system<span class="br0">&#40;</span>add_people<span class="br0">&#41;</span>
+            .add_system<span class="br0">&#40;</span>hello_world<span class="br0">&#41;</span>
+            .add_system<span class="br0">&#40;</span>greet_people<span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span>
+<span class="br0">&#125;</span>

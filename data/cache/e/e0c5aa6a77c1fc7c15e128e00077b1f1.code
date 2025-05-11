@@ -1,0 +1,14 @@
+<span class="kw1">fn</span> spawn_segment<span class="br0">&#40;</span><span class="kw1">mut</span> commands<span class="sy0">:</span> Commands<span class="sy0">,</span> position<span class="sy0">:</span> <span class="kw4">Position</span><span class="br0">&#41;</span> <span class="sy0">-&gt;</span> Entity <span class="br0">&#123;</span>
+    commands
+        .spawn_bundle<span class="br0">&#40;</span>SpriteBundle<span class="br0">&#123;</span>
+            sprite<span class="sy0">:</span> Sprite<span class="br0">&#123;</span>
+                color<span class="sy0">:</span> SNAKE_SEGMENT_COLOR<span class="sy0">,</span>
+                ..default<span class="br0">&#40;</span><span class="br0">&#41;</span>
+            <span class="br0">&#125;</span><span class="sy0">,</span>
+            ..default<span class="br0">&#40;</span><span class="br0">&#41;</span>
+        <span class="br0">&#125;</span><span class="br0">&#41;</span>
+        .insert<span class="br0">&#40;</span>SnakeSegment<span class="br0">&#41;</span>
+        .insert<span class="br0">&#40;</span>position<span class="br0">&#41;</span>
+        .insert<span class="br0">&#40;</span>Size<span class="sy0">::</span><span class="me1">square</span><span class="br0">&#40;</span><span class="nu16">0.65</span><span class="br0">&#41;</span><span class="br0">&#41;</span>
+        .id<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="co0">// This is the entity as it is essentially an ID that connects some data together</span>
+<span class="br0">&#125;</span>

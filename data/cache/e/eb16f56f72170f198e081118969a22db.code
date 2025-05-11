@@ -1,0 +1,9 @@
+<span class="kw1">use</span> std<span class="sy0">::</span><span class="me1">time</span><span class="sy0">::</span><span class="me1">UNIX_EPOCH</span> <span class="kw1">as</span> UNIX_EPOCH<span class="sy0">;</span>
+<span class="kw1">use</span> std<span class="sy0">::</span><span class="me1">time</span><span class="sy0">::</span><span class="me1">SystemTime</span> <span class="kw1">as</span> SystemTime<span class="sy0">;</span>
+&nbsp;
+<span class="kw1">fn</span> main<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+ <span class="kw1">match</span> SystemTime<span class="sy0">::</span><span class="me1">now</span><span class="br0">&#40;</span><span class="br0">&#41;</span>.duration_since<span class="br0">&#40;</span>UNIX_EPOCH<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+  Ok<span class="br0">&#40;</span>n<span class="br0">&#41;</span> <span class="sy0">=&gt;</span> println<span class="sy0">!</span><span class="br0">&#40;</span><span class="st0">&quot;1970-01-01 00:00:00 UTC was {} seconds ago!&quot;</span><span class="sy0">,</span> n.as_secs<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">,</span>
+  Err<span class="br0">&#40;</span>_<span class="br0">&#41;</span> <span class="sy0">=&gt;</span> panic<span class="sy0">!</span><span class="br0">&#40;</span><span class="st0">&quot;SystemTime before UNIX EPOCH!&quot;</span><span class="br0">&#41;</span><span class="sy0">,</span>
+ <span class="br0">&#125;</span>
+<span class="br0">&#125;</span>

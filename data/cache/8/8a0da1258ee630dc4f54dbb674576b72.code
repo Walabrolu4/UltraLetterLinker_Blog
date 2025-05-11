@@ -1,0 +1,4 @@
+<span class="kw1">let</span> a <span class="sy0">=</span> String<span class="sy0">::</span><span class="me1">from</span><span class="br0">&#40;</span><span class="st0">&quot;hi&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">let</span> b <span class="sy0">=</span> <span class="sy0">&amp;</span>a<span class="sy0">;</span> <span class="co0">// a is borrowed</span>
+<span class="co0">//OR</span>
+<span class="kw1">let</span> b <span class="sy0">=</span> a<span class="sy0">;</span> <span class="co0">//a is moved</span>

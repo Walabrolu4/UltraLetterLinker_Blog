@@ -1,0 +1,5 @@
+<span class="kw1">fn</span> greet_people<span class="br0">&#40;</span>query<span class="sy0">:</span> Query<span class="sy0">&lt;&amp;</span>Name<span class="sy0">,</span> With<span class="sy0">&lt;</span>Person<span class="sy0">&gt;&gt;</span><span class="br0">&#41;</span><span class="br0">&#123;</span>
+    <span class="kw1">for</span> name <span class="kw1">in</span> query.iter<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+        println<span class="sy0">!</span><span class="br0">&#40;</span><span class="st0">&quot;hello {}!&quot;</span><span class="sy0">,</span> name.0<span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span>
+<span class="br0">&#125;</span>

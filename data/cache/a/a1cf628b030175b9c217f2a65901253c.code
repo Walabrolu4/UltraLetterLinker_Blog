@@ -1,0 +1,6 @@
+<span class="kw1">let</span> dave <span class="sy0">=</span> Duck<span class="br0">&#123;</span>
+  awesomeness<span class="sy0">:</span><span class="nu16">100.0</span><span class="sy0">,</span>
+  name<span class="sy0">:</span> String<span class="sy0">::</span><span class="me1">from</span><span class="br0">&#40;</span><span class="st0">&quot;Dave&quot;</span><span class="br0">&#41;</span><span class="sy0">,</span>
+  color<span class="sy0">:</span><span class="br0">&#40;</span><span class="nu0">255</span><span class="sy0">,</span><span class="nu0">255</span><span class="sy0">,</span><span class="nu0">0</span><span class="br0">&#41;</span><span class="sy0">,</span>
+<span class="br0">&#125;</span><span class="sy0">;</span>
+println<span class="sy0">!</span><span class="br0">&#40;</span><span class="st0">&quot;{}&quot;</span><span class="sy0">,</span>dave.name<span class="br0">&#41;</span><span class="sy0">;</span>

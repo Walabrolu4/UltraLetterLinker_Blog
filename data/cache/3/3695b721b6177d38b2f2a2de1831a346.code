@@ -1,0 +1,10 @@
+<span class="kw1">fn</span> size_scaling<span class="br0">&#40;</span>windows<span class="sy0">:</span> Res<span class="sy0">&lt;</span>Windows<span class="sy0">&gt;,</span> <span class="kw1">mut</span> q<span class="sy0">:</span> Query<span class="sy0">&lt;</span><span class="br0">&#40;</span><span class="sy0">&amp;</span>Size<span class="sy0">,</span> <span class="sy0">&amp;</span><span class="kw1">mut</span> Transform<span class="br0">&#41;</span><span class="sy0">&gt;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    <span class="kw1">let</span> window <span class="sy0">=</span> windows.get_primary<span class="br0">&#40;</span><span class="br0">&#41;</span>.unwrap<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="kw1">for</span> <span class="br0">&#40;</span>sprite_size<span class="sy0">,</span> <span class="kw1">mut</span> transform<span class="br0">&#41;</span> <span class="kw1">in</span> q.iter_mut<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+        transform.scale <span class="sy0">=</span> Vec3<span class="sy0">::</span><span class="me1">new</span><span class="br0">&#40;</span>
+            sprite_size.width <span class="sy0">/</span> ARENA_WIDTH <span class="kw1">as</span> <span class="kw3">f32</span> <span class="sy0">*</span> window.width<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="kw1">as</span> <span class="kw3">f32</span><span class="sy0">,</span>
+            sprite_size.height <span class="sy0">/</span> ARENA_HEIGHT <span class="kw1">as</span> <span class="kw3">f32</span> <span class="sy0">*</span> window.height<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="kw1">as</span> <span class="kw3">f32</span><span class="sy0">,</span>
+            <span class="nu16">1.0</span><span class="sy0">,</span>
+        <span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span>
+<span class="br0">&#125;</span>

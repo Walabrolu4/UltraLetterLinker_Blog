@@ -1,0 +1,4 @@
+<span class="kw1">let</span> s1 <span class="sy0">=</span> String<span class="sy0">::</span><span class="me1">from</span><span class="br0">&#40;</span><span class="st0">&quot;Shaun&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">let</span> s2 <span class="sy0">=</span> s1<span class="sy0">;</span> <span class="co0">// s1 has gone out of scope</span>
+println<span class="sy0">!</span><span class="br0">&#40;</span><span class="st0">&quot;{} PauL&quot;</span><span class="sy0">,</span>s2<span class="br0">&#41;</span><span class="sy0">;</span>
+println<span class="sy0">!</span><span class="br0">&#40;</span><span class="st0">&quot;{} FaiL&quot;</span><span class="sy0">,</span>s1<span class="br0">&#41;</span><span class="sy0">;</span>

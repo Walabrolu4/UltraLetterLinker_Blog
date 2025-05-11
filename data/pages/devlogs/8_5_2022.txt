@@ -1,0 +1,167 @@
+====== Sunday , May 8th 2022 ======
+
+Solving the rustlings/move_semantics/move_semantics2 problem in all the ways the hint said was possible is the goal.
+
+this is the file
+<code rust>
+// move_semantics2.rs
+// Make me compile without changing line 13 or moving line 10!
+// Execute `rustlings hint move_semantics2` for hints :)
+
+// I AM NOT DONE
+
+fn main() {
+    //jiji
+    let vec0 = Vec::new();
+
+    let mut vec1 = fill_vec(vec0);
+
+    // Do not change the following line!
+    println!("{} has length {} content `{:?}`", "vec0", vec0.len(), vec0);
+
+    vec1.push(88);
+
+    println!("{} has length {} content `{:?}`", "vec1", vec1.len(), vec1);
+}
+
+fn fill_vec(vec: Vec<i32>) -> Vec<i32> {
+    let mut vec = vec;
+
+    vec.push(22);
+    vec.push(44);
+    vec.push(66);
+
+    vec
+}
+</code>
+this is what the hints have to say
+
+**__hints__**
+\\ 
+<del>1. Make another, separate version of the data that's in `vec0` and pass that to `fill_vec` instead.</del>
+
+2. Make `fill_vec` borrow its argument instead of taking ownership of it, and then copy the data within the function in order to return an owned `Vec<i32>`
+
+3. Make `fill_vec` *mutably* borrow its argument (which will need to be mutable), modify it directly, then not return anything. Then you can get rid of `vec1` entirely -- note that this will change what gets printed by the first `println!`
+
+
+#1 is easy, just make another vector and pass it in the fill_vec function. Something like
+<code rust>
+...
+let vec0 = Vec::new();
+let vec01 = Vec::new(); //make and use this vec instead
+let mut vec1 = fill_vec(vec01);
+...
+</code>
+
+For #2 and #3 I must getinto 
+
+==== Borrowing ====
+
+Borrowing is the act of creating a reference.
+\\
+[[https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html|{{borrowing.png?200}}]]
+
+<code rust>
+let a = String::from("hi");
+let b = &a; // a is borrowed
+//OR
+let b = a; //a is moved
+</code>
+
+Spent most of the day hanging out with some real life people..... it was fun. 
+
+But to come back to the whole thing of solving the rustlings movesemantics2 
+
+  - Make `fill_vec` borrow its argument instead of taking ownership of it, and then copy the data within the function in order to return an owned Vec<i32>
+  - Make `fill_vec` *mutably* borrow its argument (which will need to be mutable), modify it directly, then not return anything. Then you can get rid of `vec1` entirely 
+
+== For number #2 ==
+
+We just pass the refrences of the vector (//borrowing//). And than use the clone() method of the vec to clone it into the local variable within the function. This way it can be used in the printline statement as it has not been moved.
+
+<code rust>
+fn main() {
+    let vec0 = Vec::new();
+
+    let mut vec1 = fill_vec(&vec0);
+
+    // Do not change the following line!
+    println!("{} has length {} content `{:?}`", "vec0", vec0.len(), vec0);
+
+    vec1.push(88);
+
+    println!("{} has length {} content `{:?}`", "vec1", vec1.len(), vec1);
+}
+
+fn fill_vec(vec: &Vec<i32>) -> Vec<i32> {
+    let mut vec = vec.clone();
+
+    vec.push(22);
+    vec.push(44);
+    vec.push(66);
+
+    vec
+}
+</code>
+
+== #3 ==
+
+For number 3 we can get rid of vec1. We will just take vec0 have it be mutable and then change it within the function. This requires us to make vec0 mutable and pass it by reference so that the ownership does not get moved.
+
+<code rust>
+fn main() {
+    let mut vec0 = Vec::new(); //Make mutable
+    fill_vec(&mut vec0); //Pass mutable ref
+
+    // Do not change the following line!
+    println!("{} has length {} content `{:?}`", "vec0", vec0.len(), vec0);
+
+    //vec1.push(88);
+
+    //println!("{} has length {} content `{:?}`", "vec1", vec1.len(), vec1);
+}
+
+fn fill_vec(vec:&mut Vec<i32>){ //Take a mutable ref
+    //let vec = vec; dont need this anymore
+    vec.push(22); //Modify the ever loving shit out of this array!
+    vec.push(44);
+    vec.push(66);
+
+}
+</code>
+
+== Wow tuples! ==
+Tuples are kinda like arrays but they can hold different types of data.
+
+<code rust>
+let i = (2.0,"alex",false); // () are how you initialize tuples.
+</code>
+
+but like whadoo?? how do you use it?
+
+<code rust>
+fn main() {
+let i = (2,"alex",false);
+let (num,name,truth) = i; // Deconstruct it using let
+let anotherNum = i.0; //Lol yeah you can access it like that too
+let anotherString = String::from(i.1);
+match i {
+ (2,"alex",false) => println!("WOW what a specific toople"),
+ //IF first is 0 and then Destructure the second and third elements
+ (0, y, z) => println!("First is `0`, `y` is {:?}, and `z` is {:?}", y, z),
+ (1, ..)  => println!("First is `1` and the rest doesn't matter"),
+ //`..` can be used to ignore the rest of the tuple
+ _      => println!("It doesn't matter what they are"),
+ // `_` means don't bind the value to a variable
+    }
+}
+
+</code>
+that is all.
+
+~~DISCUSSION | Gosy ~~
+
+
+
+

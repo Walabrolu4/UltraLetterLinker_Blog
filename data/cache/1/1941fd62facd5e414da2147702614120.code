@@ -1,0 +1,6 @@
+<span class="kw1">let</span> <span class="kw1">mut</span> name_and_age <span class="sy0">=</span> <span class="kw3">HashMap</span><span class="sy0">::</span><span class="me1">new</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&nbsp;
+name_and_age.insert<span class="br0">&#40;</span><span class="st0">&quot;Gassica&quot;</span><span class="sy0">,</span><span class="nu0">22</span><span class="br0">&#41;</span><span class="sy0">;</span>
+name_and_age.insert<span class="br0">&#40;</span><span class="st0">&quot;Alex&quot;</span><span class="sy0">,</span><span class="nu0">12</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&nbsp;
+name_and_age.get<span class="br0">&#40;</span><span class="st0">&quot;Alex&quot;</span><span class="br0">&#41;</span> <span class="co0">//ACCESSING THE VALUE</span>

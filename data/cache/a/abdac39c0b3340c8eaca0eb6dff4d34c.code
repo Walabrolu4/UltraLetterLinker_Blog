@@ -1,0 +1,5 @@
+<span class="kw1">if</span> btn<span class="br0">&#40;</span>🅾️<span class="br0">&#41;</span> <span class="kw1">then</span> 
+ plr<span class="sy0">.</span>quacking <span class="sy0">=</span> <span class="kw4">true</span>
+<span class="kw1">else</span> 
+ plr<span class="sy0">.</span>quacking <span class="sy0">=</span> <span class="kw4">false</span>
+<span class="kw1">end</span>   

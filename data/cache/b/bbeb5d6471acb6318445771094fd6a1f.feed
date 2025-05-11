@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.8" -->
+<?xml-stylesheet href="https://www.quackypaddy.com/Projects/ultraletterlinker/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="https://www.quackypaddy.com/Projects/ultraletterlinker/feed.php">
+        <title>Ultra Letter Linker devlogs' AND 'ApbE'='ApbE</title>
+        <description></description>
+        <link>https://www.quackypaddy.com/Projects/ultraletterlinker/</link>
+        <image rdf:resource="https://www.quackypaddy.com/Projects/ultraletterlinker/lib/exe/fetch.php?media=wiki:favicon.ico" />
+       <dc:date>2024-07-07T16:44:37+00:00</dc:date>
+        <items>
+            <rdf:Seq>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="https://www.quackypaddy.com/Projects/ultraletterlinker/lib/exe/fetch.php?media=wiki:favicon.ico">
+        <title>Ultra Letter Linker</title>
+        <link>https://www.quackypaddy.com/Projects/ultraletterlinker/</link>
+        <url>https://www.quackypaddy.com/Projects/ultraletterlinker/lib/exe/fetch.php?media=wiki:favicon.ico</url>
+    </image>
+</rdf:RDF>

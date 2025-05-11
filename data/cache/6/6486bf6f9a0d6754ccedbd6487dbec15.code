@@ -1,0 +1,4 @@
+<span class="kw1">let</span> x <span class="sy0">=</span><span class="nu0">2</span><span class="sy0">;</span>
+<span class="kw1">let</span> y<span class="sy0">=</span>x<span class="sy0">;</span>
+println<span class="sy0">!</span><span class="br0">&#40;</span><span class="st0">&quot;{}&quot;</span><span class="sy0">,</span>y<span class="br0">&#41;</span><span class="sy0">;</span>
+println<span class="sy0">!</span><span class="br0">&#40;</span><span class="st0">&quot;{}&quot;</span><span class="sy0">,</span>x<span class="br0">&#41;</span><span class="sy0">;</span>

@@ -1,0 +1,18 @@
+<span class="co0">// `Vector`s can be easily iterated over</span>
+println<span class="sy0">!</span><span class="br0">&#40;</span><span class="st0">&quot;Contents of xs:&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">for</span> x <span class="kw1">in</span> xs.iter<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+ println<span class="sy0">!</span><span class="br0">&#40;</span><span class="st0">&quot;&gt; {}&quot;</span><span class="sy0">,</span> x<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&nbsp;
+<span class="co0">// A `Vector` can also be iterated over while the iteration</span>
+<span class="co0">// count is enumerated in a separate variable (`i`)</span>
+<span class="kw1">for</span> <span class="br0">&#40;</span>i<span class="sy0">,</span> x<span class="br0">&#41;</span> <span class="kw1">in</span> xs.iter<span class="br0">&#40;</span><span class="br0">&#41;</span>.enumerate<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+ println<span class="sy0">!</span><span class="br0">&#40;</span><span class="st0">&quot;In position {} we have value {}&quot;</span><span class="sy0">,</span> i<span class="sy0">,</span> x<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&nbsp;
+<span class="co0">// Thanks to `iter_mut`, mutable `Vector`s can also be iterated</span>
+<span class="co0">// over in a way that allows modifying each value</span>
+<span class="kw1">for</span> x <span class="kw1">in</span> xs.iter_mut<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+ <span class="sy0">*</span>x <span class="sy0">*=</span> <span class="nu0">3</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+println<span class="sy0">!</span><span class="br0">&#40;</span><span class="st0">&quot;Updated vector: {:?}&quot;</span><span class="sy0">,</span> xs<span class="br0">&#41;</span><span class="sy0">;</span>

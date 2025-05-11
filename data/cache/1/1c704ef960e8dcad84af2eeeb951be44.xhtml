@@ -1,0 +1,196 @@
+
+<h1 class="sectionedit1" id="saturday_30th_april_2022">Saturday, 30th April, 2022</h1>
+<div class="level1">
+
+<p>
+<span class="wrap_lo "> This is the first dev log </span>
+<br/>
+Today I started this log I guess… The plan is two fold. I want to learn the <a href="https://bevyengine.org/" class="urlextern" title="https://bevyengine.org/" rel="ugc nofollow"> bevy</a> framework and also break down super letter linker to try and make an exact copy of it. I am a lazy, so lets see how well this goes!! 🤞🤞🤞
+</p>
+
+<p>
+Bevy is a strange engine to me. I do not have any experience with entity component systems but this seems like a cool paradigm.I am mostly using it to use rust to compile down to web assembly. Rust makes me feel like a 90s hacker kid. <sup><a href="#fn__1" id="fnt__1" class="fn_top">1)</a></sup>
+</p>
+
+<p>
+<a href="/ultraletterlinker/lib/exe/fetch.php?media=devlogs:ecs_example.png" class="media" title="devlogs:ecs_example.png"><img src="/ultraletterlinker/lib/exe/fetch.php?w=400&amp;tok=be3152&amp;media=devlogs:ecs_example.png" class="media" alt="" width="400" /></a>
+</p>
+
+<p>
+Everything I learn is basically a brain copy pasta of what is on <a href="https://bevyengine.org/learn/book/getting-started/" class="urlextern" title="https://bevyengine.org/learn/book/getting-started/" rel="ugc nofollow"> this site</a>, so your better of reading that but if you so inclined for some god for-saken reason then yea keep reading….. bro. <sup><a href="#fn__2" id="fnt__2" class="fn_top">2)</a></sup> <sup><a href="#fn__3" id="fnt__3" class="fn_top">3)</a></sup>
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Saturday, 30th April, 2022&quot;,&quot;hid&quot;:&quot;saturday_30th_april_2022&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-980&quot;} -->
+<h3 class="sectionedit2" id="ecs">ECS</h3>
+<div class="level3">
+
+</div>
+
+<h5 id="basically_i_think">Basically I think</h5>
+<div class="level5">
+
+<p>
+<strong>Component</strong> : Blocks of data that make sense. eg in bevy:
+</p>
+<pre class="code rust">#<span class="br0">&#91;</span>derive<span class="br0">&#40;</span>Component<span class="br0">&#41;</span><span class="br0">&#93;</span>
+<span class="kw1">struct</span> Person<span class="sy0">;</span></pre>
+
+<p>
+<strong>Entity</strong> : the objects them selves. They are made up of components. eg in bevy:
+</p>
+<pre class="code rust">commands.spawn<span class="br0">&#40;</span><span class="br0">&#41;</span>.insert<span class="br0">&#40;</span>Person<span class="br0">&#41;</span>.insert<span class="br0">&#40;</span>Name<span class="br0">&#40;</span><span class="st0">&quot;Elaina Protractor&quot;</span>.to_string<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre>
+
+<p>
+<span class="wrap_lo ">The above code basically spawns an entity with a person and name component. <br/>
+the name component takes a string as a parameter</span>
+</p>
+
+<p>
+<strong>Systems</strong>: Systems transform the data in components. 
+</p>
+<pre class="code rust"><span class="kw1">fn</span> greet_people<span class="br0">&#40;</span>query<span class="sy0">:</span> Query<span class="sy0">&lt;&amp;</span>Name<span class="sy0">,</span> With<span class="sy0">&lt;</span>Person<span class="sy0">&gt;&gt;</span><span class="br0">&#41;</span><span class="br0">&#123;</span>
+    <span class="kw1">for</span> name <span class="kw1">in</span> query.iter<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+        println<span class="sy0">!</span><span class="br0">&#40;</span><span class="st0">&quot;hello {}!&quot;</span><span class="sy0">,</span> name.0<span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre>
+
+<p>
+<span class="wrap_lo ">The above code is a system that loops through any entity with the components Name and Person and prints “Hello name”</span>
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;ECS&quot;,&quot;hid&quot;:&quot;ecs&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;981-1807&quot;} -->
+<h3 class="sectionedit3" id="plugins">Plugins</h3>
+<div class="level3">
+
+<p>
+Plugins are the life of bevy. Everything is a plugin the renderers, UI ect… We can add “DefaultPlugins” to include the basic shtuff and it will also make a window and make the game loop I think…
+</p>
+
+<p>
+<strong>To make our own plugin</strong>
+</p>
+<pre class="code rust"><span class="kw1">pub</span> <span class="kw1">struct</span> HelloPlugin<span class="sy0">;</span>
+&nbsp;
+<span class="kw1">impl</span> Plugin <span class="kw1">for</span> HelloPlugin <span class="br0">&#123;</span>
+    <span class="kw1">fn</span> build<span class="br0">&#40;</span><span class="sy0">&amp;</span><span class="kw1">self</span><span class="sy0">,</span> app<span class="sy0">:</span> <span class="sy0">&amp;</span><span class="kw1">mut</span> App<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+        app.add_startup_system<span class="br0">&#40;</span>add_people<span class="br0">&#41;</span>
+            .add_system<span class="br0">&#40;</span>hello_world<span class="br0">&#41;</span>
+            .add_system<span class="br0">&#40;</span>greet_people<span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Plugins&quot;,&quot;hid&quot;:&quot;plugins&quot;,&quot;codeblockOffset&quot;:3,&quot;secid&quot;:3,&quot;range&quot;:&quot;1808-2294&quot;} -->
+<h3 class="sectionedit4" id="resources">Resources</h3>
+<div class="level3">
+
+<p>
+Resources are globally unique data of some kind.
+</p>
+
+<p>
+<span class="wrap_lo "> taken directly from book </span> <br/>
+
+Here are some examples of data that could be encoded as Resources:
+</p>
+<ul>
+<li class="level1"><div class="li"> Elapsed Time</div>
+</li>
+<li class="level1"><div class="li"> Asset Collections (sounds, textures, meshes)</div>
+</li>
+<li class="level1"><div class="li"> Renderers</div>
+</li>
+</ul>
+
+<p>
+This example takes the above greet_people function and makes it repeat every 2 seconds by using the timer resource that the DefaultPlugins provide
+</p>
+<pre class="code rust"><span class="kw1">fn</span> greet_people<span class="br0">&#40;</span>
+    time<span class="sy0">:</span> Res<span class="sy0">&lt;</span>Time<span class="sy0">&gt;,</span> <span class="kw1">mut</span> timer<span class="sy0">:</span> ResMut<span class="sy0">&lt;</span>GreetTimer<span class="sy0">&gt;,</span> query<span class="sy0">:</span> Query<span class="sy0">&lt;&amp;</span>Name<span class="sy0">,</span> With<span class="sy0">&lt;</span>Person<span class="sy0">&gt;&gt;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    <span class="co0">// update our timer with the time elapsed since the last update</span>
+    <span class="co0">// if that caused the timer to finish, we say hello to everyone</span>
+    <span class="kw1">if</span> timer.0.tick<span class="br0">&#40;</span>time.delta<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="br0">&#41;</span>.just_finished<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+        <span class="kw1">for</span> name <span class="kw1">in</span> query.iter<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+            println<span class="sy0">!</span><span class="br0">&#40;</span><span class="st0">&quot;hello {}!&quot;</span><span class="sy0">,</span> name.0<span class="br0">&#41;</span><span class="sy0">;</span>
+        <span class="br0">&#125;</span>
+    <span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre>
+
+<p>
+<br/>
+
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Resources&quot;,&quot;hid&quot;:&quot;resources&quot;,&quot;codeblockOffset&quot;:4,&quot;secid&quot;:4,&quot;range&quot;:&quot;2295-3121&quot;} -->
+<h3 class="sectionedit5" id="tutorial_-_snake">TUTORIAL - Snake</h3>
+<div class="level3">
+
+<p>
+<a href="https://mbuffett.com/posts/bevy-snake-tutorial/" class="urlextern" title="https://mbuffett.com/posts/bevy-snake-tutorial/" rel="ugc nofollow"> following this link</a>
+</p>
+
+<p>
+I am following this tutorial to make a snake game to get an idea of how games are made in bevy while also seeing wtf rust is about.
+</p>
+
+</div>
+
+<h5 id="some_interesting_snippits">Some interesting snippits</h5>
+<div class="level5">
+
+<p>
+<strong>code for sizing sprites in our tile system</strong>
+</p>
+<pre class="code rust"><span class="kw1">fn</span> size_scaling<span class="br0">&#40;</span>windows<span class="sy0">:</span> Res<span class="sy0">&lt;</span>Windows<span class="sy0">&gt;,</span> <span class="kw1">mut</span> q<span class="sy0">:</span> Query<span class="sy0">&lt;</span><span class="br0">&#40;</span><span class="sy0">&amp;</span>Size<span class="sy0">,</span> <span class="sy0">&amp;</span><span class="kw1">mut</span> Transform<span class="br0">&#41;</span><span class="sy0">&gt;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    <span class="kw1">let</span> window <span class="sy0">=</span> windows.get_primary<span class="br0">&#40;</span><span class="br0">&#41;</span>.unwrap<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="kw1">for</span> <span class="br0">&#40;</span>sprite_size<span class="sy0">,</span> <span class="kw1">mut</span> transform<span class="br0">&#41;</span> <span class="kw1">in</span> q.iter_mut<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+        transform.scale <span class="sy0">=</span> Vec3<span class="sy0">::</span><span class="me1">new</span><span class="br0">&#40;</span>
+            sprite_size.width <span class="sy0">/</span> ARENA_WIDTH <span class="kw1">as</span> <span class="kw3">f32</span> <span class="sy0">*</span> window.width<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="kw1">as</span> <span class="kw3">f32</span><span class="sy0">,</span>
+            sprite_size.height <span class="sy0">/</span> ARENA_HEIGHT <span class="kw1">as</span> <span class="kw3">f32</span> <span class="sy0">*</span> window.height<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="kw1">as</span> <span class="kw3">f32</span><span class="sy0">,</span>
+            <span class="nu16">1.0</span><span class="sy0">,</span>
+        <span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre>
+
+<p>
+The sizing logic goes like so: if something has a width of 1 in a grid of 40, and the window is 400px across, then it should have a width of 10.
+<br/>
+
+<br/>
+
+</p>
+
+<p>
+Im gonna leave this at here for now and pick it up later
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;TUTORIAL - Snake&quot;,&quot;hid&quot;:&quot;tutorial_-_snake&quot;,&quot;codeblockOffset&quot;:5,&quot;secid&quot;:5,&quot;range&quot;:&quot;3122-4078&quot;} -->
+<h3 class="sectionedit6" id="external_links">External links</h3>
+<div class="level3">
+
+<p>
+<a href="https://bevyengine.org/examples" class="urlextern" title="https://bevyengine.org/examples" rel="ugc nofollow"> examples</a> <br/>
+
+<a href="https://docs.rs/bevy/latest/bevy/" class="urlextern" title="https://docs.rs/bevy/latest/bevy/" rel="ugc nofollow"> docs</a> <br/>
+
+<a href="https://github.com/bevyengine/bevy/blob/latest/examples/games/breakout.rs" class="urlextern" title="https://github.com/bevyengine/bevy/blob/latest/examples/games/breakout.rs" rel="ugc nofollow"> breakout source example</a> <br/>
+
+<a href="https://bevyengine.org/assets/" class="urlextern" title="https://bevyengine.org/assets/" rel="ugc nofollow"> Plugins and Assets</a> <br/>
+
+<a href="https://bevy-cheatbook.github.io/" class="urlextern" title="https://bevy-cheatbook.github.io/" rel="ugc nofollow"> Cheatbook</a> <br/>
+
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;External links&quot;,&quot;hid&quot;:&quot;external_links&quot;,&quot;codeblockOffset&quot;:6,&quot;secid&quot;:6,&quot;range&quot;:&quot;4079-&quot;} --><div class="footnotes">
+<div class="fn"><sup><a href="#fnt__1" id="fn__1" class="fn_bot">1)</a></sup> 
+<div class="content">also dokuwiki is pretty cool</div></div>
+<div class="fn"><sup><a href="#fnt__2" id="fn__2" class="fn_bot">2)</a></sup> 
+<div class="content">AGAIN EVERYTHING YOU READ HERE IS WRONG…jk…….</div></div>
+<div class="fn"><sup><a href="#fnt__3" id="fn__3" class="fn_bot">3)</a></sup> 
+<div class="content">or am i?</div></div>
+</div>

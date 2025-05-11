@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.8" -->
+<?xml-stylesheet href="https://quackypaddy.com/Projects/ultraletterlinker/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="https://quackypaddy.com/Projects/ultraletterlinker/feed.php">
+        <title>Ultra Letter Linker</title>
+        <description></description>
+        <link>https://quackypaddy.com/Projects/ultraletterlinker/</link>
+        <image rdf:resource="https://quackypaddy.com/Projects/ultraletterlinker/lib/exe/fetch.php?media=wiki:favicon.ico" />
+       <dc:date>2025-05-02T08:15:41+00:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="https://quackypaddy.com/Projects/ultraletterlinker/doku.php?id=devlogs:22_5_2022&amp;rev=1653402794&amp;do=diff"/>
+                <rdf:li rdf:resource="https://quackypaddy.com/Projects/ultraletterlinker/doku.php?image=devlogs%3Aduckgame_0.gif&amp;ns=devlogs&amp;rev=1653204934&amp;tab_details=history&amp;mediado=diff&amp;do=media"/>
+                <rdf:li rdf:resource="https://quackypaddy.com/Projects/ultraletterlinker/doku.php?image=devlogs%3Alame.png&amp;ns=devlogs&amp;rev=1653204291&amp;tab_details=history&amp;mediado=diff&amp;do=media"/>
+                <rdf:li rdf:resource="https://quackypaddy.com/Projects/ultraletterlinker/doku.php?image=devlogs%3Amovingduck.gif&amp;ns=devlogs&amp;rev=1653204033&amp;tab_details=history&amp;mediado=diff&amp;do=media"/>
+                <rdf:li rdf:resource="https://quackypaddy.com/Projects/ultraletterlinker/doku.php?image=devlogs%3Aduckanim_0.gif&amp;ns=devlogs&amp;rev=1653203533&amp;tab_details=history&amp;mediado=diff&amp;do=media"/>
+                <rdf:li rdf:resource="https://quackypaddy.com/Projects/ultraletterlinker/doku.php?image=devlogs%3Aqakboi.png&amp;ns=devlogs&amp;rev=1653203045&amp;tab_details=history&amp;mediado=diff&amp;do=media"/>
+                <rdf:li rdf:resource="https://quackypaddy.com/Projects/ultraletterlinker/doku.php?image=devlogs%3Abest-26-sad-cat-memes-2-1024x892.png&amp;ns=devlogs&amp;rev=1653202653&amp;tab_details=history&amp;mediado=diff&amp;do=media"/>
+                <rdf:li rdf:resource="https://quackypaddy.com/Projects/ultraletterlinker/doku.php?id=devlogs:15_5_2022&amp;rev=1652657036&amp;do=diff"/>
+                <rdf:li rdf:resource="https://quackypaddy.com/Projects/ultraletterlinker/doku.php?image=devlogs%3Arustlings_excersizes.png&amp;ns=devlogs&amp;rev=1652656944&amp;tab_details=history&amp;mediado=diff&amp;do=media"/>
+                <rdf:li rdf:resource="https://quackypaddy.com/Projects/ultraletterlinker/doku.php?image=devlogs%3Asad_duck.png&amp;ns=devlogs&amp;rev=1652226320&amp;tab_details=history&amp;mediado=diff&amp;do=media"/>
+                <rdf:li rdf:resource="https://quackypaddy.com/Projects/ultraletterlinker/doku.php?image=devlogs%3Aborrowing.png&amp;ns=devlogs&amp;rev=1652041191&amp;tab_details=history&amp;mediado=diff&amp;do=media"/>
+                <rdf:li rdf:resource="https://quackypaddy.com/Projects/ultraletterlinker/doku.php?image=devlogs%3Astring_move.png&amp;ns=devlogs&amp;rev=1651979278&amp;tab_details=history&amp;mediado=diff&amp;do=media"/>
+                <rdf:li rdf:resource="https://quackypaddy.com/Projects/ultraletterlinker/doku.php?image=devlogs%3Astring_copy.png&amp;ns=devlogs&amp;rev=1651978977&amp;tab_details=history&amp;mediado=diff&amp;do=media"/>
+                <rdf:li rdf:resource="https://quackypaddy.com/Projects/ultraletterlinker/doku.php?image=devlogs%3Astack_v_heap.jpg&amp;ns=devlogs&amp;rev=1651966184&amp;tab_details=history&amp;mediado=diff&amp;do=media"/>
+                <rdf:li rdf:resource="https://quackypaddy.com/Projects/ultraletterlinker/doku.php?image=devlogs%3Arust_is_safe_lol.png&amp;ns=devlogs&amp;rev=1651962907&amp;tab_details=history&amp;mediado=diff&amp;do=media"/>
+                <rdf:li rdf:resource="https://quackypaddy.com/Projects/ultraletterlinker/doku.php?image=devlogs%3Anvide.png&amp;ns=devlogs&amp;rev=1651955281&amp;tab_details=history&amp;mediado=diff&amp;do=media"/>
+                <rdf:li rdf:resource="https://quackypaddy.com/Projects/ultraletterlinker/doku.php?image=devlogs%3Aull_ecs-e-fication.jpg&amp;ns=devlogs&amp;rev=1651950853&amp;tab_details=history&amp;mediado=diff&amp;do=media"/>
+                <rdf:li rdf:resource="https://quackypaddy.com/Projects/ultraletterlinker/doku.php?image=devlogs%3Aullbreakdown.jpg&amp;ns=devlogs&amp;rev=1651950852&amp;tab_details=history&amp;mediado=diff&amp;do=media"/>
+                <rdf:li rdf:resource="https://quackypaddy.com/Projects/ultraletterlinker/doku.php?image=devlogs%3Asnaketut.png&amp;ns=devlogs&amp;rev=1651445202&amp;tab_details=history&amp;mediado=diff&amp;do=media"/>
+                <rdf:li rdf:resource="https://quackypaddy.com/Projects/ultraletterlinker/doku.php?image=devlogs%3Aecs_example.png&amp;ns=devlogs&amp;rev=1651338812&amp;tab_details=history&amp;mediado=diff&amp;do=media"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="https://quackypaddy.com/Projects/ultraletterlinker/lib/exe/fetch.php?media=wiki:favicon.ico">
+        <title>Ultra Letter Linker</title>
+        <link>https://quackypaddy.com/Projects/ultraletterlinker/</link>
+        <url>https://quackypaddy.com/Projects/ultraletterlinker/lib/exe/fetch.php?media=wiki:favicon.ico</url>
+    </image>
+    <item rdf:about="https://quackypaddy.com/Projects/ultraletterlinker/doku.php?id=devlogs:22_5_2022&amp;rev=1653402794&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2022-05-24T09:33:14+00:00</dc:date>
+        <dc:creator>root (root@undisclosed.example.com)</dc:creator>
+        <title>devlogs:22_5_2022</title>
+        <link>https://quackypaddy.com/Projects/ultraletterlinker/doku.php?id=devlogs:22_5_2022&amp;rev=1653402794&amp;do=diff</link>
+        <description>Saturday, May 22nd , 2022
+
+Um I got up to quiz 2 in rustlings!! yeet. Thats half way there lol
+
+&lt;https://solifequotes.com/wp-content/uploads/2019/09/Best-26-Sad-Cat-Memes-2-1024x892.png&gt;
+
+Funtasy consolee
+
+Then I got distracted.... Not sure why but I redownloaded Pico-8. My bois and I play a lot of duck game and I'm no artist  but I since pico 8 uses 8×8</description>
+    </item>
+    <item rdf:about="https://quackypaddy.com/Projects/ultraletterlinker/doku.php?image=devlogs%3Aduckgame_0.gif&amp;ns=devlogs&amp;rev=1653204934&amp;tab_details=history&amp;mediado=diff&amp;do=media">
+        <dc:format>text/html</dc:format>
+        <dc:date>2022-05-22T02:35:34+00:00</dc:date>
+        <dc:creator>root (root@undisclosed.example.com)</dc:creator>
+        <title>devlogs:duckgame_0.gif - created</title>
+        <link>https://quackypaddy.com/Projects/ultraletterlinker/doku.php?image=devlogs%3Aduckgame_0.gif&amp;ns=devlogs&amp;rev=1653204934&amp;tab_details=history&amp;mediado=diff&amp;do=media</link>
+        <description>&lt;img src=&quot;https://quackypaddy.com/Projects/ultraletterlinker/lib/exe/fetch.php?w=384&amp;h=384&amp;t=1697747128&amp;amp;tok=50ab77&amp;amp;media=devlogs:duckgame_0.gif&quot; alt=&quot;devlogs:duckgame_0.gif&quot; /&gt;</description>
+    </item>
+    <item rdf:about="https://quackypaddy.com/Projects/ultraletterlinker/doku.php?image=devlogs%3Alame.png&amp;ns=devlogs&amp;rev=1653204291&amp;tab_details=history&amp;mediado=diff&amp;do=media">
+        <dc:format>text/html</dc:format>
+        <dc:date>2022-05-22T02:24:51+00:00</dc:date>
+        <dc:creator>root (root@undisclosed.example.com)</dc:creator>
+        <title>devlogs:lame.png - created</title>
+        <link>https://quackypaddy.com/Projects/ultraletterlinker/doku.php?image=devlogs%3Alame.png&amp;ns=devlogs&amp;rev=1653204291&amp;tab_details=history&amp;mediado=diff&amp;do=media</link>
+        <description>&lt;img src=&quot;https://quackypaddy.com/Projects/ultraletterlinker/lib/exe/fetch.php?w=500&amp;h=267&amp;t=1697747128&amp;amp;tok=bde4b6&amp;amp;media=devlogs:lame.png&quot; alt=&quot;devlogs:lame.png&quot; /&gt;</description>
+    </item>
+    <item rdf:about="https://quackypaddy.com/Projects/ultraletterlinker/doku.php?image=devlogs%3Amovingduck.gif&amp;ns=devlogs&amp;rev=1653204033&amp;tab_details=history&amp;mediado=diff&amp;do=media">
+        <dc:format>text/html</dc:format>
+        <dc:date>2022-05-22T02:20:33+00:00</dc:date>
+        <dc:creator>root (root@undisclosed.example.com)</dc:creator>
+        <title>devlogs:movingduck.gif - created</title>
+        <link>https://quackypaddy.com/Projects/ultraletterlinker/doku.php?image=devlogs%3Amovingduck.gif&amp;ns=devlogs&amp;rev=1653204033&amp;tab_details=history&amp;mediado=diff&amp;do=media</link>
+        <description>&lt;img src=&quot;https://quackypaddy.com/Projects/ultraletterlinker/lib/exe/fetch.php?w=384&amp;h=384&amp;t=1697747128&amp;amp;tok=24fc1c&amp;amp;media=devlogs:movingduck.gif&quot; alt=&quot;devlogs:movingduck.gif&quot; /&gt;</description>
+    </item>
+    <item rdf:about="https://quackypaddy.com/Projects/ultraletterlinker/doku.php?image=devlogs%3Aduckanim_0.gif&amp;ns=devlogs&amp;rev=1653203533&amp;tab_details=history&amp;mediado=diff&amp;do=media">
+        <dc:format>text/html</dc:format>
+        <dc:date>2022-05-22T02:12:13+00:00</dc:date>
+        <dc:creator>root (root@undisclosed.example.com)</dc:creator>
+        <title>devlogs:duckanim_0.gif - created</title>
+        <link>https://quackypaddy.com/Projects/ultraletterlinker/doku.php?image=devlogs%3Aduckanim_0.gif&amp;ns=devlogs&amp;rev=1653203533&amp;tab_details=history&amp;mediado=diff&amp;do=media</link>
+        <description>&lt;img src=&quot;https://quackypaddy.com/Projects/ultraletterlinker/lib/exe/fetch.php?w=384&amp;h=384&amp;t=1697747128&amp;amp;tok=7aca58&amp;amp;media=devlogs:duckanim_0.gif&quot; alt=&quot;devlogs:duckanim_0.gif&quot; /&gt;</description>
+    </item>
+    <item rdf:about="https://quackypaddy.com/Projects/ultraletterlinker/doku.php?image=devlogs%3Aqakboi.png&amp;ns=devlogs&amp;rev=1653203045&amp;tab_details=history&amp;mediado=diff&amp;do=media">
+        <dc:format>text/html</dc:format>
+        <dc:date>2022-05-22T02:04:05+00:00</dc:date>
+        <dc:creator>root (root@undisclosed.example.com)</dc:creator>
+        <title>devlogs:qakboi.png - created</title>
+        <link>https://quackypaddy.com/Projects/ultraletterlinker/doku.php?image=devlogs%3Aqakboi.png&amp;ns=devlogs&amp;rev=1653203045&amp;tab_details=history&amp;mediado=diff&amp;do=media</link>
+        <description>&lt;img src=&quot;https://quackypaddy.com/Projects/ultraletterlinker/lib/exe/fetch.php?w=493&amp;h=500&amp;t=1697747128&amp;amp;tok=213028&amp;amp;media=devlogs:qakboi.png&quot; alt=&quot;devlogs:qakboi.png&quot; /&gt;</description>
+    </item>
+    <item rdf:about="https://quackypaddy.com/Projects/ultraletterlinker/doku.php?image=devlogs%3Abest-26-sad-cat-memes-2-1024x892.png&amp;ns=devlogs&amp;rev=1653202653&amp;tab_details=history&amp;mediado=diff&amp;do=media">
+        <dc:format>text/html</dc:format>
+        <dc:date>2022-05-22T01:57:33+00:00</dc:date>
+        <dc:creator>root (root@undisclosed.example.com)</dc:creator>
+        <title>devlogs:best-26-sad-cat-memes-2-1024x892.png - created</title>
+        <link>https://quackypaddy.com/Projects/ultraletterlinker/doku.php?image=devlogs%3Abest-26-sad-cat-memes-2-1024x892.png&amp;ns=devlogs&amp;rev=1653202653&amp;tab_details=history&amp;mediado=diff&amp;do=media</link>
+        <description>&lt;img src=&quot;https://quackypaddy.com/Projects/ultraletterlinker/lib/exe/fetch.php?w=500&amp;h=435&amp;t=1697747128&amp;amp;tok=8930ee&amp;amp;media=devlogs:best-26-sad-cat-memes-2-1024x892.png&quot; alt=&quot;devlogs:best-26-sad-cat-memes-2-1024x892.png&quot; /&gt;</description>
+    </item>
+    <item rdf:about="https://quackypaddy.com/Projects/ultraletterlinker/doku.php?id=devlogs:15_5_2022&amp;rev=1652657036&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2022-05-15T18:23:56+00:00</dc:date>
+        <dc:creator>root (root@undisclosed.example.com)</dc:creator>
+        <title>devlogs:15_5_2022</title>
+        <link>https://quackypaddy.com/Projects/ultraletterlinker/doku.php?id=devlogs:15_5_2022&amp;rev=1652657036&amp;do=diff</link>
+        <description>Sunday, May 15th 2022
+
+k
+
+have you play this game? this. its pretty funny.
+
+Collections
+
+Collections are like arrays or tuples whose size do not need to be known at compile time. The two types are
+
+	*  Vectors
+	*  HashMap (like Dictionaries in c#)
+
+Vectors</description>
+    </item>
+    <item rdf:about="https://quackypaddy.com/Projects/ultraletterlinker/doku.php?image=devlogs%3Arustlings_excersizes.png&amp;ns=devlogs&amp;rev=1652656944&amp;tab_details=history&amp;mediado=diff&amp;do=media">
+        <dc:format>text/html</dc:format>
+        <dc:date>2022-05-15T18:22:24+00:00</dc:date>
+        <dc:creator>root (root@undisclosed.example.com)</dc:creator>
+        <title>devlogs:rustlings_excersizes.png - created</title>
+        <link>https://quackypaddy.com/Projects/ultraletterlinker/doku.php?image=devlogs%3Arustlings_excersizes.png&amp;ns=devlogs&amp;rev=1652656944&amp;tab_details=history&amp;mediado=diff&amp;do=media</link>
+        <description>&lt;img src=&quot;https://quackypaddy.com/Projects/ultraletterlinker/lib/exe/fetch.php?w=490&amp;h=500&amp;t=1697747128&amp;amp;tok=319b92&amp;amp;media=devlogs:rustlings_excersizes.png&quot; alt=&quot;devlogs:rustlings_excersizes.png&quot; /&gt;</description>
+    </item>
+    <item rdf:about="https://quackypaddy.com/Projects/ultraletterlinker/doku.php?image=devlogs%3Asad_duck.png&amp;ns=devlogs&amp;rev=1652226320&amp;tab_details=history&amp;mediado=diff&amp;do=media">
+        <dc:format>text/html</dc:format>
+        <dc:date>2022-05-10T18:45:20+00:00</dc:date>
+        <dc:creator>root (root@undisclosed.example.com)</dc:creator>
+        <title>devlogs:sad_duck.png - created</title>
+        <link>https://quackypaddy.com/Projects/ultraletterlinker/doku.php?image=devlogs%3Asad_duck.png&amp;ns=devlogs&amp;rev=1652226320&amp;tab_details=history&amp;mediado=diff&amp;do=media</link>
+        <description>&lt;img src=&quot;https://quackypaddy.com/Projects/ultraletterlinker/lib/exe/fetch.php?w=375&amp;h=500&amp;t=1697747128&amp;amp;tok=ba4439&amp;amp;media=devlogs:sad_duck.png&quot; alt=&quot;devlogs:sad_duck.png&quot; /&gt;</description>
+    </item>
+    <item rdf:about="https://quackypaddy.com/Projects/ultraletterlinker/doku.php?image=devlogs%3Aborrowing.png&amp;ns=devlogs&amp;rev=1652041191&amp;tab_details=history&amp;mediado=diff&amp;do=media">
+        <dc:format>text/html</dc:format>
+        <dc:date>2022-05-08T15:19:51+00:00</dc:date>
+        <dc:creator>root (root@undisclosed.example.com)</dc:creator>
+        <title>devlogs:borrowing.png - created</title>
+        <link>https://quackypaddy.com/Projects/ultraletterlinker/doku.php?image=devlogs%3Aborrowing.png&amp;ns=devlogs&amp;rev=1652041191&amp;tab_details=history&amp;mediado=diff&amp;do=media</link>
+        <description>&lt;img src=&quot;https://quackypaddy.com/Projects/ultraletterlinker/lib/exe/fetch.php?w=500&amp;h=211&amp;t=1697747128&amp;amp;tok=fe0fa2&amp;amp;media=devlogs:borrowing.png&quot; alt=&quot;devlogs:borrowing.png&quot; /&gt;</description>
+    </item>
+    <item rdf:about="https://quackypaddy.com/Projects/ultraletterlinker/doku.php?image=devlogs%3Astring_move.png&amp;ns=devlogs&amp;rev=1651979278&amp;tab_details=history&amp;mediado=diff&amp;do=media">
+        <dc:format>text/html</dc:format>
+        <dc:date>2022-05-07T22:07:58+00:00</dc:date>
+        <dc:creator>root (root@undisclosed.example.com)</dc:creator>
+        <title>devlogs:string_move.png - created</title>
+        <link>https://quackypaddy.com/Projects/ultraletterlinker/doku.php?image=devlogs%3Astring_move.png&amp;ns=devlogs&amp;rev=1651979278&amp;tab_details=history&amp;mediado=diff&amp;do=media</link>
+        <description>&lt;img src=&quot;https://quackypaddy.com/Projects/ultraletterlinker/lib/exe/fetch.php?w=472&amp;h=456&amp;t=1697747128&amp;amp;tok=3730fd&amp;amp;media=devlogs:string_move.png&quot; alt=&quot;devlogs:string_move.png&quot; /&gt;</description>
+    </item>
+    <item rdf:about="https://quackypaddy.com/Projects/ultraletterlinker/doku.php?image=devlogs%3Astring_copy.png&amp;ns=devlogs&amp;rev=1651978977&amp;tab_details=history&amp;mediado=diff&amp;do=media">
+        <dc:format>text/html</dc:format>
+        <dc:date>2022-05-07T22:02:57+00:00</dc:date>
+        <dc:creator>root (root@undisclosed.example.com)</dc:creator>
+        <title>devlogs:string_copy.png - created</title>
+        <link>https://quackypaddy.com/Projects/ultraletterlinker/doku.php?image=devlogs%3Astring_copy.png&amp;ns=devlogs&amp;rev=1651978977&amp;tab_details=history&amp;mediado=diff&amp;do=media</link>
+        <description>&lt;img src=&quot;https://quackypaddy.com/Projects/ultraletterlinker/lib/exe/fetch.php?w=447&amp;h=448&amp;t=1697747128&amp;amp;tok=a5dfdc&amp;amp;media=devlogs:string_copy.png&quot; alt=&quot;devlogs:string_copy.png&quot; /&gt;</description>
+    </item>
+    <item rdf:about="https://quackypaddy.com/Projects/ultraletterlinker/doku.php?image=devlogs%3Astack_v_heap.jpg&amp;ns=devlogs&amp;rev=1651966184&amp;tab_details=history&amp;mediado=diff&amp;do=media">
+        <dc:format>text/html</dc:format>
+        <dc:date>2022-05-07T18:29:44+00:00</dc:date>
+        <dc:creator>root (root@undisclosed.example.com)</dc:creator>
+        <title>devlogs:stack_v_heap.jpg - created</title>
+        <link>https://quackypaddy.com/Projects/ultraletterlinker/doku.php?image=devlogs%3Astack_v_heap.jpg&amp;ns=devlogs&amp;rev=1651966184&amp;tab_details=history&amp;mediado=diff&amp;do=media</link>
+        <description>&lt;img src=&quot;https://quackypaddy.com/Projects/ultraletterlinker/lib/exe/fetch.php?w=500&amp;h=360&amp;t=1697747128&amp;amp;tok=349c75&amp;amp;media=devlogs:stack_v_heap.jpg&quot; alt=&quot;devlogs:stack_v_heap.jpg&quot; /&gt;</description>
+    </item>
+    <item rdf:about="https://quackypaddy.com/Projects/ultraletterlinker/doku.php?image=devlogs%3Arust_is_safe_lol.png&amp;ns=devlogs&amp;rev=1651962907&amp;tab_details=history&amp;mediado=diff&amp;do=media">
+        <dc:format>text/html</dc:format>
+        <dc:date>2022-05-07T17:35:07+00:00</dc:date>
+        <dc:creator>root (root@undisclosed.example.com)</dc:creator>
+        <title>devlogs:rust_is_safe_lol.png - created</title>
+        <link>https://quackypaddy.com/Projects/ultraletterlinker/doku.php?image=devlogs%3Arust_is_safe_lol.png&amp;ns=devlogs&amp;rev=1651962907&amp;tab_details=history&amp;mediado=diff&amp;do=media</link>
+        <description>&lt;img src=&quot;https://quackypaddy.com/Projects/ultraletterlinker/lib/exe/fetch.php?w=500&amp;h=342&amp;t=1697747128&amp;amp;tok=631b4e&amp;amp;media=devlogs:rust_is_safe_lol.png&quot; alt=&quot;devlogs:rust_is_safe_lol.png&quot; /&gt;</description>
+    </item>
+    <item rdf:about="https://quackypaddy.com/Projects/ultraletterlinker/doku.php?image=devlogs%3Anvide.png&amp;ns=devlogs&amp;rev=1651955281&amp;tab_details=history&amp;mediado=diff&amp;do=media">
+        <dc:format>text/html</dc:format>
+        <dc:date>2022-05-07T15:28:01+00:00</dc:date>
+        <dc:creator>root (root@undisclosed.example.com)</dc:creator>
+        <title>devlogs:nvide.png - created</title>
+        <link>https://quackypaddy.com/Projects/ultraletterlinker/doku.php?image=devlogs%3Anvide.png&amp;ns=devlogs&amp;rev=1651955281&amp;tab_details=history&amp;mediado=diff&amp;do=media</link>
+        <description>&lt;img src=&quot;https://quackypaddy.com/Projects/ultraletterlinker/lib/exe/fetch.php?w=500&amp;h=433&amp;t=1697747128&amp;amp;tok=5c91bf&amp;amp;media=devlogs:nvide.png&quot; alt=&quot;devlogs:nvide.png&quot; /&gt;</description>
+    </item>
+    <item rdf:about="https://quackypaddy.com/Projects/ultraletterlinker/doku.php?image=devlogs%3Aull_ecs-e-fication.jpg&amp;ns=devlogs&amp;rev=1651950853&amp;tab_details=history&amp;mediado=diff&amp;do=media">
+        <dc:format>text/html</dc:format>
+        <dc:date>2022-05-07T14:14:13+00:00</dc:date>
+        <dc:creator>root (root@undisclosed.example.com)</dc:creator>
+        <title>devlogs:ull_ecs-e-fication.jpg - created</title>
+        <link>https://quackypaddy.com/Projects/ultraletterlinker/doku.php?image=devlogs%3Aull_ecs-e-fication.jpg&amp;ns=devlogs&amp;rev=1651950853&amp;tab_details=history&amp;mediado=diff&amp;do=media</link>
+        <description>&lt;img src=&quot;https://quackypaddy.com/Projects/ultraletterlinker/lib/exe/fetch.php?w=323&amp;h=500&amp;t=1697747128&amp;amp;tok=bb7f82&amp;amp;media=devlogs:ull_ecs-e-fication.jpg&quot; alt=&quot;devlogs:ull_ecs-e-fication.jpg&quot; /&gt;</description>
+    </item>
+    <item rdf:about="https://quackypaddy.com/Projects/ultraletterlinker/doku.php?image=devlogs%3Aullbreakdown.jpg&amp;ns=devlogs&amp;rev=1651950852&amp;tab_details=history&amp;mediado=diff&amp;do=media">
+        <dc:format>text/html</dc:format>
+        <dc:date>2022-05-07T14:14:12+00:00</dc:date>
+        <dc:creator>root (root@undisclosed.example.com)</dc:creator>
+        <title>devlogs:ullbreakdown.jpg - created</title>
+        <link>https://quackypaddy.com/Projects/ultraletterlinker/doku.php?image=devlogs%3Aullbreakdown.jpg&amp;ns=devlogs&amp;rev=1651950852&amp;tab_details=history&amp;mediado=diff&amp;do=media</link>
+        <description>&lt;img src=&quot;https://quackypaddy.com/Projects/ultraletterlinker/lib/exe/fetch.php?w=343&amp;h=500&amp;t=1697747128&amp;amp;tok=27df98&amp;amp;media=devlogs:ullbreakdown.jpg&quot; alt=&quot;devlogs:ullbreakdown.jpg&quot; /&gt;</description>
+    </item>
+    <item rdf:about="https://quackypaddy.com/Projects/ultraletterlinker/doku.php?image=devlogs%3Asnaketut.png&amp;ns=devlogs&amp;rev=1651445202&amp;tab_details=history&amp;mediado=diff&amp;do=media">
+        <dc:format>text/html</dc:format>
+        <dc:date>2022-05-01T17:46:42+00:00</dc:date>
+        <dc:creator>root (root@undisclosed.example.com)</dc:creator>
+        <title>devlogs:snaketut.png - created</title>
+        <link>https://quackypaddy.com/Projects/ultraletterlinker/doku.php?image=devlogs%3Asnaketut.png&amp;ns=devlogs&amp;rev=1651445202&amp;tab_details=history&amp;mediado=diff&amp;do=media</link>
+        <description>&lt;img src=&quot;https://quackypaddy.com/Projects/ultraletterlinker/lib/exe/fetch.php?w=500&amp;h=281&amp;t=1697747128&amp;amp;tok=ac8bfb&amp;amp;media=devlogs:snaketut.png&quot; alt=&quot;devlogs:snaketut.png&quot; /&gt;</description>
+    </item>
+    <item rdf:about="https://quackypaddy.com/Projects/ultraletterlinker/doku.php?image=devlogs%3Aecs_example.png&amp;ns=devlogs&amp;rev=1651338812&amp;tab_details=history&amp;mediado=diff&amp;do=media">
+        <dc:format>text/html</dc:format>
+        <dc:date>2022-04-30T12:13:32+00:00</dc:date>
+        <dc:creator>root (root@undisclosed.example.com)</dc:creator>
+        <title>devlogs:ecs_example.png - created</title>
+        <link>https://quackypaddy.com/Projects/ultraletterlinker/doku.php?image=devlogs%3Aecs_example.png&amp;ns=devlogs&amp;rev=1651338812&amp;tab_details=history&amp;mediado=diff&amp;do=media</link>
+        <description>&lt;img src=&quot;https://quackypaddy.com/Projects/ultraletterlinker/lib/exe/fetch.php?w=500&amp;h=273&amp;t=1697747128&amp;amp;tok=f14929&amp;amp;media=devlogs:ecs_example.png&quot; alt=&quot;devlogs:ecs_example.png&quot; /&gt;</description>
+    </item>
+</rdf:RDF>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.8" -->
+<?xml-stylesheet href="https://www.quackypaddy.com/Projects/ultraletterlinker/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="https://www.quackypaddy.com/Projects/ultraletterlinker/feed.php">
+        <title>Ultra Letter Linker devlogs</title>
+        <description></description>
+        <link>https://www.quackypaddy.com/Projects/ultraletterlinker/</link>
+        <image rdf:resource="https://www.quackypaddy.com/Projects/ultraletterlinker/lib/exe/fetch.php?media=wiki:favicon.ico" />
+       <dc:date>2025-04-06T21:57:42+00:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="https://www.quackypaddy.com/Projects/ultraletterlinker/doku.php?id=devlogs:1_5_2022&amp;rev=1697747128&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.quackypaddy.com/Projects/ultraletterlinker/doku.php?id=devlogs:7_5_2022&amp;rev=1697747128&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.quackypaddy.com/Projects/ultraletterlinker/doku.php?id=devlogs:8_5_2022&amp;rev=1697747128&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.quackypaddy.com/Projects/ultraletterlinker/doku.php?id=devlogs:14_5_2022&amp;rev=1697747128&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.quackypaddy.com/Projects/ultraletterlinker/doku.php?id=devlogs:15_5_2022&amp;rev=1697747128&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.quackypaddy.com/Projects/ultraletterlinker/doku.php?id=devlogs:22_5_2022&amp;rev=1697747128&amp;do=diff"/>
+                <rdf:li rdf:resource="https://www.quackypaddy.com/Projects/ultraletterlinker/doku.php?id=devlogs:30_4_2022&amp;rev=1697747128&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="https://www.quackypaddy.com/Projects/ultraletterlinker/lib/exe/fetch.php?media=wiki:favicon.ico">
+        <title>Ultra Letter Linker</title>
+        <link>https://www.quackypaddy.com/Projects/ultraletterlinker/</link>
+        <url>https://www.quackypaddy.com/Projects/ultraletterlinker/lib/exe/fetch.php?media=wiki:favicon.ico</url>
+    </image>
+    <item rdf:about="https://www.quackypaddy.com/Projects/ultraletterlinker/doku.php?id=devlogs:1_5_2022&amp;rev=1697747128&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2023-10-19T15:25:28+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>devlogs:1_5_2022</title>
+        <link>https://www.quackypaddy.com/Projects/ultraletterlinker/doku.php?id=devlogs:1_5_2022&amp;rev=1697747128&amp;do=diff</link>
+        <description>Sunday, May 1st 2022
+
+Still following this  tutorial. 
+
+Shit
+
+ 
+fn position_translation(windows: Res&lt;Windows&gt;, mut q: Query&lt;(&amp;Position, &amp;mut Transform)&gt;) {
+    fn convert(pos: f32, bound_window: f32, bound_game: f32) -&gt; f32 {
+        let tile_size = bound_window / bound_game;
+        pos / bound_game * bound_window - (bound_window / 2.) + (tile_size / 2.)
+    }
+    let window = windows.get_primary().unwrap();
+    for (pos, mut transform) in q.iter_mut() {
+        transform.translation = Vec3::ne…</description>
+    </item>
+    <item rdf:about="https://www.quackypaddy.com/Projects/ultraletterlinker/doku.php?id=devlogs:7_5_2022&amp;rev=1697747128&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2023-10-19T15:25:28+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>devlogs:7_5_2022</title>
+        <link>https://www.quackypaddy.com/Projects/ultraletterlinker/doku.php?id=devlogs:7_5_2022&amp;rev=1697747128&amp;do=diff</link>
+        <description>Saturday, May 7th, 2022
+
+“A language that doesn’t affect the way you think about programming, is not worth knowing.”
+Alan Perlis“
+
+
+
+
+
+
+Things that didn't happen on the today
+
+not much
+
+
+
+Not much happened last week. Lots of work work I guess. I finished the snake tutorial. Still don't get it.</description>
+    </item>
+    <item rdf:about="https://www.quackypaddy.com/Projects/ultraletterlinker/doku.php?id=devlogs:8_5_2022&amp;rev=1697747128&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2023-10-19T15:25:28+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>devlogs:8_5_2022</title>
+        <link>https://www.quackypaddy.com/Projects/ultraletterlinker/doku.php?id=devlogs:8_5_2022&amp;rev=1697747128&amp;do=diff</link>
+        <description>Sunday , May 8th 2022
+
+Solving the rustlings/move_semantics/move_semantics2 problem in all the ways the hint said was possible is the goal.
+
+this is the file
+
+
+// move_semantics2.rs
+// Make me compile without changing line 13 or moving line 10!
+// Execute `rustlings hint move_semantics2` for hints :)
+
+// I AM NOT DONE
+
+fn main() {
+    //jiji
+    let vec0 = Vec::new();
+
+    let mut vec1 = fill_vec(vec0);
+
+    // Do not change the following line!
+    println!(&quot;{} has length {} content `{:?}`&quot;, &quot;ve…</description>
+    </item>
+    <item rdf:about="https://www.quackypaddy.com/Projects/ultraletterlinker/doku.php?id=devlogs:14_5_2022&amp;rev=1697747128&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2023-10-19T15:25:28+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>devlogs:14_5_2022</title>
+        <link>https://www.quackypaddy.com/Projects/ultraletterlinker/doku.php?id=devlogs:14_5_2022&amp;rev=1697747128&amp;do=diff</link>
+        <description>Saturday, May 15th 2022
+
+Worked on a fyoo more rustlings excersizes
+
+I spent the weekday mostly working and doing other things so I try to spend a couple hours every weekend doing more rustling challenges as it still seems thats getting me to understand the basics of rust better. After I finish rustlings I will go back to looking at bevy. Maybe it will look less cryptic.</description>
+    </item>
+    <item rdf:about="https://www.quackypaddy.com/Projects/ultraletterlinker/doku.php?id=devlogs:15_5_2022&amp;rev=1697747128&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2023-10-19T15:25:28+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>devlogs:15_5_2022</title>
+        <link>https://www.quackypaddy.com/Projects/ultraletterlinker/doku.php?id=devlogs:15_5_2022&amp;rev=1697747128&amp;do=diff</link>
+        <description>Sunday, May 15th 2022
+
+k
+
+have you play this game? this. its pretty funny.
+
+Collections
+
+Collections are like arrays or tuples whose size do not need to be known at compile time. The two types are
+
+	*  Vectors
+	*  HashMap (like Dictionaries in c#)
+
+Vectors</description>
+    </item>
+    <item rdf:about="https://www.quackypaddy.com/Projects/ultraletterlinker/doku.php?id=devlogs:22_5_2022&amp;rev=1697747128&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2023-10-19T15:25:28+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>devlogs:22_5_2022</title>
+        <link>https://www.quackypaddy.com/Projects/ultraletterlinker/doku.php?id=devlogs:22_5_2022&amp;rev=1697747128&amp;do=diff</link>
+        <description>Saturday, May 22nd , 2022
+
+Um I got up to quiz 2 in rustlings!! yeet. Thats half way there lol
+
+&lt;https://solifequotes.com/wp-content/uploads/2019/09/Best-26-Sad-Cat-Memes-2-1024x892.png&gt;
+
+Funtasy consolee
+
+Then I got distracted.... Not sure why but I redownloaded Pico-8. My bois and I play a lot of duck game and I'm no artist  but I since pico 8 uses 8×8</description>
+    </item>
+    <item rdf:about="https://www.quackypaddy.com/Projects/ultraletterlinker/doku.php?id=devlogs:30_4_2022&amp;rev=1697747128&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2023-10-19T15:25:28+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>devlogs:30_4_2022</title>
+        <link>https://www.quackypaddy.com/Projects/ultraletterlinker/doku.php?id=devlogs:30_4_2022&amp;rev=1697747128&amp;do=diff</link>
+        <description>Saturday, 30th April, 2022
+
+ This is the first dev log 
+
+Today I started this log I guess... The plan is two fold. I want to learn the  bevy framework and also break down super letter linker to try and make an exact copy of it. I am a lazy, so lets see how well this goes!! 🤞🤞🤞</description>
+    </item>
+</rdf:RDF>

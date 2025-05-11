@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- generator="FeedCreator 1.8" -->
+<?xml-stylesheet href="https://quackypaddy.com/Projects/ultraletterlinker/lib/exe/css.php?s=feed" type="text/css"?>
+<rdf:RDF
+    xmlns="http://purl.org/rss/1.0/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:slash="http://purl.org/rss/1.0/modules/slash/"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel rdf:about="https://quackypaddy.com/Projects/ultraletterlinker/feed.php">
+        <title>Ultra Letter Linker superletterlinker</title>
+        <description></description>
+        <link>https://quackypaddy.com/Projects/ultraletterlinker/</link>
+        <image rdf:resource="https://quackypaddy.com/Projects/ultraletterlinker/lib/exe/fetch.php?media=wiki:favicon.ico" />
+       <dc:date>2025-04-04T17:43:19+00:00</dc:date>
+        <items>
+            <rdf:Seq>
+                <rdf:li rdf:resource="https://quackypaddy.com/Projects/ultraletterlinker/doku.php?id=superletterlinker:start&amp;rev=1697747128&amp;do=diff"/>
+            </rdf:Seq>
+        </items>
+    </channel>
+    <image rdf:about="https://quackypaddy.com/Projects/ultraletterlinker/lib/exe/fetch.php?media=wiki:favicon.ico">
+        <title>Ultra Letter Linker</title>
+        <link>https://quackypaddy.com/Projects/ultraletterlinker/</link>
+        <url>https://quackypaddy.com/Projects/ultraletterlinker/lib/exe/fetch.php?media=wiki:favicon.ico</url>
+    </image>
+    <item rdf:about="https://quackypaddy.com/Projects/ultraletterlinker/doku.php?id=superletterlinker:start&amp;rev=1697747128&amp;do=diff">
+        <dc:format>text/html</dc:format>
+        <dc:date>2023-10-19T15:25:28+00:00</dc:date>
+        <dc:creator>Anonymous (anonymous@undisclosed.example.com)</dc:creator>
+        <title>superletterlinker:start</title>
+        <link>https://quackypaddy.com/Projects/ultraletterlinker/doku.php?id=superletterlinker:start&amp;rev=1697747128&amp;do=diff</link>
+        <description>Super Letter Linker
+
+This page will document the break down of the original Super Letter Linker developed by GameHouse Games in 2003
+superletterlinker index
+
+
+Description
+
+taken from  gamefools.com 
+
+
+
+
+Try this brain-busting word game, where you click the letter wafers to spell a variety of words in all directions. Super Letter Linker requires lightning-fast mental reflexes to find all the words before time is up. Form words in all directions to launch to the next level, or try the find-all mod…</description>
+    </item>
+</rdf:RDF>

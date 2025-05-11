@@ -1,0 +1,30 @@
+<span class="kw1">fn</span> main<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    <span class="kw1">let</span> s1 <span class="sy0">=</span> gives_ownership<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>         <span class="co0">// gives_ownership moves its return</span>
+                                        <span class="co0">// value into s1</span>
+&nbsp;
+    <span class="kw1">let</span> s2 <span class="sy0">=</span> String<span class="sy0">::</span><span class="me1">from</span><span class="br0">&#40;</span><span class="st0">&quot;hello&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>     <span class="co0">// s2 comes into scope</span>
+&nbsp;
+    <span class="kw1">let</span> s3 <span class="sy0">=</span> takes_and_gives_back<span class="br0">&#40;</span>s2<span class="br0">&#41;</span><span class="sy0">;</span>  <span class="co0">// s2 is moved into</span>
+                                        <span class="co0">// takes_and_gives_back, which also</span>
+                                        <span class="co0">// moves its return value into s3</span>
+<span class="br0">&#125;</span> <span class="co0">// Here, s3 goes out of scope and is dropped. s2 was moved, so nothing</span>
+  <span class="co0">// happens. s1 goes out of scope and is dropped.</span>
+&nbsp;
+<span class="kw1">fn</span> gives_ownership<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="sy0">-&gt;</span> String <span class="br0">&#123;</span>             <span class="co0">// gives_ownership will move its</span>
+                                             <span class="co0">// return value into the function</span>
+                                             <span class="co0">// that calls it</span>
+&nbsp;
+    <span class="kw1">let</span> some_string <span class="sy0">=</span> String<span class="sy0">::</span><span class="me1">from</span><span class="br0">&#40;</span><span class="st0">&quot;yours&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span> <span class="co0">// some_string comes into scope</span>
+&nbsp;
+    some_string                              <span class="co0">// some_string is returned and</span>
+                                             <span class="co0">// moves out to the calling</span>
+                                             <span class="co0">// function</span>
+<span class="br0">&#125;</span>
+&nbsp;
+<span class="co0">// This function takes a String and returns one</span>
+<span class="kw1">fn</span> takes_and_gives_back<span class="br0">&#40;</span>a_string<span class="sy0">:</span> String<span class="br0">&#41;</span> <span class="sy0">-&gt;</span> String <span class="br0">&#123;</span> <span class="co0">// a_string comes into</span>
+                                                      <span class="co0">// scope</span>
+&nbsp;
+    a_string  <span class="co0">// a_string is returned and moves out to the calling function</span>
+<span class="br0">&#125;</span>
+<span class="co0">//Taken from the rust docs.. Again please read that. and not this...</span>

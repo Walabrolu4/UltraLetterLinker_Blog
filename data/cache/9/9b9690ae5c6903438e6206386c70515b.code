@@ -1,0 +1,5 @@
+    <span class="kw1">let</span> s1 <span class="sy0">=</span> String<span class="sy0">::</span><span class="me1">from</span><span class="br0">&#40;</span><span class="st0">&quot;hello&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    <span class="kw1">let</span> s2 <span class="sy0">=</span> s1.clone<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&nbsp;
+    println<span class="sy0">!</span><span class="br0">&#40;</span><span class="st0">&quot;s1 = {}, s2 = {}&quot;</span><span class="sy0">,</span> s1<span class="sy0">,</span> s2<span class="br0">&#41;</span><span class="sy0">;</span> <span class="co0">//Good job it compiles and you wasted memory!</span>
+    <span class="co0">//Copied from the rust book</span>

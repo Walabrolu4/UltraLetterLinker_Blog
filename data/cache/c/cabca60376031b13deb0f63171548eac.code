@@ -1,0 +1,6 @@
+<span class="kw1">enum</span> Message <span class="br0">&#123;</span>
+    ChangeColor<span class="br0">&#40;</span><span class="kw3">u8</span><span class="sy0">,</span><span class="kw3">u8</span><span class="sy0">,</span><span class="kw3">u8</span><span class="br0">&#41;</span><span class="sy0">,</span>
+    Echo<span class="br0">&#40;</span>String<span class="br0">&#41;</span><span class="sy0">,</span>
+    Move<span class="br0">&#123;</span>x<span class="sy0">:</span><span class="kw3">u8</span><span class="sy0">,</span>y<span class="sy0">:</span><span class="kw3">u8</span><span class="br0">&#125;</span><span class="sy0">,</span>
+    Quit<span class="sy0">,</span>
+<span class="br0">&#125;</span>

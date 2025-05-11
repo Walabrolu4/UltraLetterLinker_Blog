@@ -1,0 +1,197 @@
+
+<h1 class="sectionedit1" id="sunday_may_8th_2022">Sunday , May 8th 2022</h1>
+<div class="level1">
+
+<p>
+Solving the rustlings/move_semantics/move_semantics2 problem in all the ways the hint said was possible is the goal.
+</p>
+
+<p>
+this is the file
+</p>
+<pre class="code rust"><span class="co0">// move_semantics2.rs</span>
+<span class="co0">// Make me compile without changing line 13 or moving line 10!</span>
+<span class="co0">// Execute `rustlings hint move_semantics2` for hints :)</span>
+&nbsp;
+<span class="co0">// I AM NOT DONE</span>
+&nbsp;
+<span class="kw1">fn</span> main<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    <span class="co0">//jiji</span>
+    <span class="kw1">let</span> vec0 <span class="sy0">=</span> Vec<span class="sy0">::</span><span class="me1">new</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&nbsp;
+    <span class="kw1">let</span> <span class="kw1">mut</span> vec1 <span class="sy0">=</span> fill_vec<span class="br0">&#40;</span>vec0<span class="br0">&#41;</span><span class="sy0">;</span>
+&nbsp;
+    <span class="co0">// Do not change the following line!</span>
+    println<span class="sy0">!</span><span class="br0">&#40;</span><span class="st0">&quot;{} has length {} content `{:?}`&quot;</span><span class="sy0">,</span> <span class="st0">&quot;vec0&quot;</span><span class="sy0">,</span> vec0.len<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">,</span> vec0<span class="br0">&#41;</span><span class="sy0">;</span>
+&nbsp;
+    vec1.push<span class="br0">&#40;</span><span class="nu0">88</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&nbsp;
+    println<span class="sy0">!</span><span class="br0">&#40;</span><span class="st0">&quot;{} has length {} content `{:?}`&quot;</span><span class="sy0">,</span> <span class="st0">&quot;vec1&quot;</span><span class="sy0">,</span> vec1.len<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">,</span> vec1<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&nbsp;
+<span class="kw1">fn</span> fill_vec<span class="br0">&#40;</span>vec<span class="sy0">:</span> Vec<span class="sy0">&lt;</span>i32<span class="sy0">&gt;</span><span class="br0">&#41;</span> <span class="sy0">-&gt;</span> Vec<span class="sy0">&lt;</span>i32<span class="sy0">&gt;</span> <span class="br0">&#123;</span>
+    <span class="kw1">let</span> <span class="kw1">mut</span> vec <span class="sy0">=</span> vec<span class="sy0">;</span>
+&nbsp;
+    vec.push<span class="br0">&#40;</span><span class="nu0">22</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    vec.push<span class="br0">&#40;</span><span class="nu0">44</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    vec.push<span class="br0">&#40;</span><span class="nu0">66</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&nbsp;
+    vec
+<span class="br0">&#125;</span></pre>
+
+<p>
+this is what the hints have to say
+</p>
+
+<p>
+<strong><em class="u">hints</em></strong>
+<br/>
+
+<del>1. Make another, separate version of the data that&#039;s in `vec0` and pass that to `fill_vec` instead.</del>
+</p>
+
+<p>
+2. Make `fill_vec` borrow its argument instead of taking ownership of it, and then copy the data within the function in order to return an owned `Vec&lt;i32&gt;`
+</p>
+
+<p>
+3. Make `fill_vec` *mutably* borrow its argument (which will need to be mutable), modify it directly, then not return anything. Then you can get rid of `vec1` entirely – note that this will change what gets printed by the first `println!`
+</p>
+
+<p>
+#1 is easy, just make another vector and pass it in the fill_vec function. Something like
+</p>
+<pre class="code rust">...
+<span class="kw1">let</span> vec0 <span class="sy0">=</span> Vec<span class="sy0">::</span><span class="me1">new</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">let</span> vec01 <span class="sy0">=</span> Vec<span class="sy0">::</span><span class="me1">new</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span> <span class="co0">//make and use this vec instead</span>
+<span class="kw1">let</span> <span class="kw1">mut</span> vec1 <span class="sy0">=</span> fill_vec<span class="br0">&#40;</span>vec01<span class="br0">&#41;</span><span class="sy0">;</span>
+...</pre>
+
+<p>
+For #2 and #3 I must getinto 
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Sunday , May 8th 2022&quot;,&quot;hid&quot;:&quot;sunday_may_8th_2022&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-1611&quot;} -->
+<h3 class="sectionedit2" id="borrowing">Borrowing</h3>
+<div class="level3">
+
+<p>
+Borrowing is the act of creating a reference.
+<br/>
+
+<a href="https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html" class="media" title="https://doc.rust-lang.org/book/ch04-02-references-and-borrowing.html" rel="ugc nofollow"><img src="/Projects/ultraletterlinker/lib/exe/fetch.php?w=200&amp;tok=c81e78&amp;media=devlogs:borrowing.png" class="media" alt="" width="200" /></a>
+</p>
+<pre class="code rust"><span class="kw1">let</span> a <span class="sy0">=</span> String<span class="sy0">::</span><span class="me1">from</span><span class="br0">&#40;</span><span class="st0">&quot;hi&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">let</span> b <span class="sy0">=</span> <span class="sy0">&amp;</span>a<span class="sy0">;</span> <span class="co0">// a is borrowed</span>
+<span class="co0">//OR</span>
+<span class="kw1">let</span> b <span class="sy0">=</span> a<span class="sy0">;</span> <span class="co0">//a is moved</span></pre>
+
+<p>
+Spent most of the day hanging out with some real life people….. it was fun. 
+</p>
+
+<p>
+But to come back to the whole thing of solving the rustlings movesemantics2 
+</p>
+<ol>
+<li class="level1"><div class="li"> Make `fill_vec` borrow its argument instead of taking ownership of it, and then copy the data within the function in order to return an owned Vec&lt;i32&gt;</div>
+</li>
+<li class="level1"><div class="li"> Make `fill_vec` *mutably* borrow its argument (which will need to be mutable), modify it directly, then not return anything. Then you can get rid of `vec1` entirely </div>
+</li>
+</ol>
+
+</div>
+
+<h5 id="for_number_2">For number #2</h5>
+<div class="level5">
+
+<p>
+We just pass the refrences of the vector (<em>borrowing</em>). And than use the clone() method of the vec to clone it into the local variable within the function. This way it can be used in the printline statement as it has not been moved.
+</p>
+<pre class="code rust"><span class="kw1">fn</span> main<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    <span class="kw1">let</span> vec0 <span class="sy0">=</span> Vec<span class="sy0">::</span><span class="me1">new</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&nbsp;
+    <span class="kw1">let</span> <span class="kw1">mut</span> vec1 <span class="sy0">=</span> fill_vec<span class="br0">&#40;</span><span class="sy0">&amp;</span>vec0<span class="br0">&#41;</span><span class="sy0">;</span>
+&nbsp;
+    <span class="co0">// Do not change the following line!</span>
+    println<span class="sy0">!</span><span class="br0">&#40;</span><span class="st0">&quot;{} has length {} content `{:?}`&quot;</span><span class="sy0">,</span> <span class="st0">&quot;vec0&quot;</span><span class="sy0">,</span> vec0.len<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">,</span> vec0<span class="br0">&#41;</span><span class="sy0">;</span>
+&nbsp;
+    vec1.push<span class="br0">&#40;</span><span class="nu0">88</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&nbsp;
+    println<span class="sy0">!</span><span class="br0">&#40;</span><span class="st0">&quot;{} has length {} content `{:?}`&quot;</span><span class="sy0">,</span> <span class="st0">&quot;vec1&quot;</span><span class="sy0">,</span> vec1.len<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">,</span> vec1<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span>
+&nbsp;
+<span class="kw1">fn</span> fill_vec<span class="br0">&#40;</span>vec<span class="sy0">:</span> <span class="sy0">&amp;</span>Vec<span class="sy0">&lt;</span>i32<span class="sy0">&gt;</span><span class="br0">&#41;</span> <span class="sy0">-&gt;</span> Vec<span class="sy0">&lt;</span>i32<span class="sy0">&gt;</span> <span class="br0">&#123;</span>
+    <span class="kw1">let</span> <span class="kw1">mut</span> vec <span class="sy0">=</span> vec.clone<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&nbsp;
+    vec.push<span class="br0">&#40;</span><span class="nu0">22</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    vec.push<span class="br0">&#40;</span><span class="nu0">44</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    vec.push<span class="br0">&#40;</span><span class="nu0">66</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&nbsp;
+    vec
+<span class="br0">&#125;</span></pre>
+
+</div>
+
+<h5 id="section3">#3</h5>
+<div class="level5">
+
+<p>
+For number 3 we can get rid of vec1. We will just take vec0 have it be mutable and then change it within the function. This requires us to make vec0 mutable and pass it by reference so that the ownership does not get moved.
+</p>
+<pre class="code rust"><span class="kw1">fn</span> main<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    <span class="kw1">let</span> <span class="kw1">mut</span> vec0 <span class="sy0">=</span> Vec<span class="sy0">::</span><span class="me1">new</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span> <span class="co0">//Make mutable</span>
+    fill_vec<span class="br0">&#40;</span><span class="sy0">&amp;</span><span class="kw1">mut</span> vec0<span class="br0">&#41;</span><span class="sy0">;</span> <span class="co0">//Pass mutable ref</span>
+&nbsp;
+    <span class="co0">// Do not change the following line!</span>
+    println<span class="sy0">!</span><span class="br0">&#40;</span><span class="st0">&quot;{} has length {} content `{:?}`&quot;</span><span class="sy0">,</span> <span class="st0">&quot;vec0&quot;</span><span class="sy0">,</span> vec0.len<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">,</span> vec0<span class="br0">&#41;</span><span class="sy0">;</span>
+&nbsp;
+    <span class="co0">//vec1.push(88);</span>
+&nbsp;
+    <span class="co0">//println!(&quot;{} has length {} content `{:?}`&quot;, &quot;vec1&quot;, vec1.len(), vec1);</span>
+<span class="br0">&#125;</span>
+&nbsp;
+<span class="kw1">fn</span> fill_vec<span class="br0">&#40;</span>vec<span class="sy0">:&amp;</span><span class="kw1">mut</span> Vec<span class="sy0">&lt;</span>i32<span class="sy0">&gt;</span><span class="br0">&#41;</span><span class="br0">&#123;</span> <span class="co0">//Take a mutable ref</span>
+    <span class="co0">//let vec = vec; dont need this anymore</span>
+    vec.push<span class="br0">&#40;</span><span class="nu0">22</span><span class="br0">&#41;</span><span class="sy0">;</span> <span class="co0">//Modify the ever loving shit out of this array!</span>
+    vec.push<span class="br0">&#40;</span><span class="nu0">44</span><span class="br0">&#41;</span><span class="sy0">;</span>
+    vec.push<span class="br0">&#40;</span><span class="nu0">66</span><span class="br0">&#41;</span><span class="sy0">;</span>
+&nbsp;
+<span class="br0">&#125;</span></pre>
+
+</div>
+
+<h5 id="wow_tuples">Wow tuples!</h5>
+<div class="level5">
+
+<p>
+Tuples are kinda like arrays but they can hold different types of data.
+</p>
+<pre class="code rust"><span class="kw1">let</span> i <span class="sy0">=</span> <span class="br0">&#40;</span><span class="nu16">2.0</span><span class="sy0">,</span><span class="st0">&quot;alex&quot;</span><span class="sy0">,</span><span class="kw2">false</span><span class="br0">&#41;</span><span class="sy0">;</span> <span class="co0">// () are how you initialize tuples.</span></pre>
+
+<p>
+but like whadoo?? how do you use it?
+</p>
+<pre class="code rust"><span class="kw1">fn</span> main<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+<span class="kw1">let</span> i <span class="sy0">=</span> <span class="br0">&#40;</span><span class="nu0">2</span><span class="sy0">,</span><span class="st0">&quot;alex&quot;</span><span class="sy0">,</span><span class="kw2">false</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">let</span> <span class="br0">&#40;</span>num<span class="sy0">,</span>name<span class="sy0">,</span>truth<span class="br0">&#41;</span> <span class="sy0">=</span> i<span class="sy0">;</span> <span class="co0">// Deconstruct it using let</span>
+<span class="kw1">let</span> anotherNum <span class="sy0">=</span> i.0<span class="sy0">;</span> <span class="co0">//Lol yeah you can access it like that too</span>
+<span class="kw1">let</span> anotherString <span class="sy0">=</span> String<span class="sy0">::</span><span class="me1">from</span><span class="br0">&#40;</span>i.1<span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="kw1">match</span> i <span class="br0">&#123;</span>
+ <span class="br0">&#40;</span><span class="nu0">2</span><span class="sy0">,</span><span class="st0">&quot;alex&quot;</span><span class="sy0">,</span><span class="kw2">false</span><span class="br0">&#41;</span> <span class="sy0">=&gt;</span> println<span class="sy0">!</span><span class="br0">&#40;</span><span class="st0">&quot;WOW what a specific toople&quot;</span><span class="br0">&#41;</span><span class="sy0">,</span>
+ <span class="co0">//IF first is 0 and then Destructure the second and third elements</span>
+ <span class="br0">&#40;</span><span class="nu0">0</span><span class="sy0">,</span> y<span class="sy0">,</span> z<span class="br0">&#41;</span> <span class="sy0">=&gt;</span> println<span class="sy0">!</span><span class="br0">&#40;</span><span class="st0">&quot;First is `0`, `y` is {:?}, and `z` is {:?}&quot;</span><span class="sy0">,</span> y<span class="sy0">,</span> z<span class="br0">&#41;</span><span class="sy0">,</span>
+ <span class="br0">&#40;</span><span class="nu0">1</span><span class="sy0">,</span> ..<span class="br0">&#41;</span>  <span class="sy0">=&gt;</span> println<span class="sy0">!</span><span class="br0">&#40;</span><span class="st0">&quot;First is `1` and the rest doesn't matter&quot;</span><span class="br0">&#41;</span><span class="sy0">,</span>
+ <span class="co0">//`..` can be used to ignore the rest of the tuple</span>
+ _      <span class="sy0">=&gt;</span> println<span class="sy0">!</span><span class="br0">&#40;</span><span class="st0">&quot;It doesn't matter what they are&quot;</span><span class="br0">&#41;</span><span class="sy0">,</span>
+ <span class="co0">// `_` means don't bind the value to a variable</span>
+    <span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre>
+
+<p>
+that is all.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Borrowing&quot;,&quot;hid&quot;:&quot;borrowing&quot;,&quot;codeblockOffset&quot;:2,&quot;secid&quot;:2,&quot;range&quot;:&quot;1612-&quot;} -->

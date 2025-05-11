@@ -1,0 +1,100 @@
+====== Saturday, May 22nd , 2022 ======
+
+Um I got up to quiz 2 in rustlings!! yeet. Thats half way there lol
+
+[[https://solifequotes.com/wp-content/uploads/2019/09/Best-26-Sad-Cat-Memes-2-1024x892.png|{{:devlogs:best-26-sad-cat-memes-2-1024x892.png?200}}]]
+
+==== Funtasy consolee ====
+
+Then I got distracted.... Not sure why but I redownloaded [[https://www.lexaloffle.com/pico-8.php|Pico-8]]. My bois((of all genders)) and I play a lot of [[https://store.steampowered.com/app/312530/Duck_Game/|duck game]] and I'm no artist ((only a run on sentence aficionado)) but I since pico 8 uses 8x8 sprites. How hard could making a duck be!
+
+
+==== turns out not that hard ====
+
+
+
+{{:devlogs:qakboi.png?direct&200|}}
+
+yea not that hard I guess. Hes kinda cute. And he could also hold a gun and move right! ((not sure why))
+
+{{:devlogs:duckanim_0.gif?direct&200|}}
+<wrap lo>click to watch the gif</wrap>
+
+The duck was so cool I had to get it working a little more... So I thouight I could get him moving around and quacking. I mostly copied the code from [[https://nerdyteachers.com/Explain/Platformer/|this website]]((asIUSALLYDO>()). After A while I had a little level and a duck moving around!!
+
+
+{{:devlogs:movingduck.gif?direct&200|}}<wrap lo>click to watch the gif</wrap>
+
+wow!((iphone))
+
+
+==== The only kinda cool thing ====
+
+The only kinda cool thing I did on my own was get the duck to quack! there is no sfx yet but the way I got em quacking is Kinda clever? idk maybe
+
+{{:devlogs:duckgame_0.gif?direct&200|}}<wrap lo>click to watch the gif</wrap>
+
+I basically have two animations for idle and run. One quacking and one not quacking. 
+
+{{:devlogs:lame.png?direct&200|}}
+
+The quacking animations are exactly 16 frames offset from their non quacking counter parts. So all I need to do in code is check if the player is holding the quack button
+
+<code lua> 
+if btn(🅾️) then 
+ plr.quacking = true
+else 
+ plr.quacking = false
+end   
+</code>
+
+Then in the animation update a variable "quack" equals 0 or 16 based on if the button is played. We then will play the idle/run frame + quack. If the quack button is not held this will be the initial animation otherwise it will add 16 and play the quack animation. This works clean while the player is running or jumping as the duck body keeps its current motion and only the mouth snaps to its place.((the one small downside is that the mouth wont always smoooothly animate.))
+
+<code lua>
+--quacking
+local quack=0
+if plr.quacking then quack = 16 end
+</code>
+
+.. and then in the actual animation 
+
+<code lua>
+--running
+elseif plr.running then
+ if plr.sp > run_end+quack then plr.sp = run_strt+quack 
+ elseif plr.sp < run_strt+quack then plr.sp = run_strt+quack
+ end
+ if time()-plr.anim>0.1 then
+ plr.anim = time()
+ plr.sp+=1
+ if plr.sp>6+quack then
+ plr.sp=1+quack
+ end
+end
+		
+--idle
+else
+if plr.sp < idle_strt+quack then plr.sp = idle_strt+quack end
+if time()-plr.anim>.3 then
+ plr.anim=time()
+ plr.sp+=1
+ if plr.sp>38+quack then
+  plr.sp=33+quack
+ end
+end
+end
+end
+</code>
+
+Yeaaa that was bascially my weekish and day. Hope I didn't forget my rust. Oof 
+
+btwdubs nglw/btc here is the link to the live cart.. [[https://quackypaddy.com/duckgame/|These words right here, please and thank you]]
+
+~~DISCUSSION~~
+
+
+
+
+
+
+

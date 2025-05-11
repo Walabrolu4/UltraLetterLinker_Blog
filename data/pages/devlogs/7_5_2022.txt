@@ -1,0 +1,255 @@
+====== Saturday, May 7th, 2022 ======
+<wrap lo>“A language that doesn’t affect the way you think about programming, is not worth knowing.”
+Alan Perlis"</wrap>
+
+\\
+\\
+
+====Things that didn't happen on the today====
+
+===not much===
+((yea I said it like that, so what?))
+
+Not much happened last week. Lots of work work I guess. I finished the snake tutorial. Still don't get it. 
+
+I found this APP called [[https://github.com/rust-lang/rustlings | rustlings]]. Its a bunch of small exercises that help teach the language. Going through those over the weekend should hopefully help.
+
+=== Ink Shit ===
+
+I made these small sketches \\
+
+{{ :devlogs:ullbreakdown.jpg?direct&600 |}}
+
+The top half is super letter linker and the bottom is super text twist. They both have some similar parts. I think that super text twist could be a good proof of concept and then I can turn it into letter linker by adding the "Linking" and level generation shtuff.
+
+{{ :devlogs:ull_ecs-e-fication.jpg?direct&600 |}}
+
+I tried to ecs-ify super letter linker. but you know. ((eh)) ((ehhhhhh))
+
+=== ohyeaandididthis ===
+Oh yea and I set up [[https://github.com/neovide/neovide | Neo vide]] why?? cause it looks cool.. 
+
+{{:devlogs:nvide.png?direct&400}} ((Yea babyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy))
+\\
+
+I also setup a new path folder on my E: drive and then added a bash command to startup nvide.exe
+
+At some point it would be cool to add it to my right click context menu to open up neovide at a given location.
+
+
+<WRAP left alert 60%>
+ My coolness factor went up around 20%
+</WRAP>
+
+==== lol ====
+
+==== Today Todaaayz stuff ====
+
+=== Ownership === 
+
+__Ownership in rust is the set of rules on how memory is managed__ 
+
+ownership also makes rust safe. Take a look at this insane chart
+\\
+[[https://medium.com/learning-rust/rust-basics-e73304ab35c7|{{devlogs:rust_is_safe_lol.png?256}}]]
+
+basically Instead of having a garbage collector which will effect performance, or needing to keep track of memory yourself ((like a savage)). Rust has some basic rules around borrowing that are checked during compile time. It inserts its own clean up code during compile time. This works because it is so fucking anal about everything jesus. 
+
+== Stack and Heap == 
+
+[[https://www.stechies.com/difference-between-stack-heap|{{stack_v_heap.jpg?256}}]] ((I dooly say these images take you to the websites frometh which I sto-el them))
+
+**Stack:**
+The stack stores values in a linear way. It puts the data in the order it receives it and removes them in the opposite order. This is knows as last in first out((and not lastin of us 2))
+
+<blockquote>
+\\
+\\
+Think of a stack of plates: when you add more plates, you put them on top of the pile, and when you need a plate, you take one off the top. Adding or removing plates from the middle or bottom wouldn’t work as well! Adding data is called pushing onto the stack, and removing data is called popping off the stack 
+
+<cite> The wonderful people at the [[https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html| RustDocs]]</cite>
+</blockquote>
+\\
+
+All data on the stack **MUST** have a knows fixed size at compile time
+
+**Heap:**
+The heap is less organized. You request space. The memory allocator finds you some thats big enough and gives you a pointer to it ((allocating memory)). Since the pointer is always of a fixed size, you can store that in the stack.
+
+<blockquote>
+\\
+\\
+Think of being seated at a restaurant. When you enter, you state the number of people in your group, and the staff finds an empty table that fits everyone and leads you there. If someone in your group comes late, they can ask where you’ve been seated to find you.
+
+<cite> the wonderful wonderful people at the [[https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html| RustDocs]]</cite>
+</blockquote>
+
+
+
+Pushing to the stack is faster <-> allocating to the heap is slower because it has to find memory rather than just //popping// it on top
+
+Reading values from the stack is faster, the computer knows how much to jump to the next memory location <-> Reading form the heap is slower as the computer((NOT [[https://en.wikipedia.org/wiki/Joseph_Schumpeter| Schumpeter]])) has to take the pointer and find it in the heap.
+
+The computer would rather work on data on the stack as it is so much faster and cooler. 
+<blockquote>
+\\
+\\
+When your code calls a function, the values passed into the function (including, potentially, pointers to data on the heap) and the function’s local variables get pushed onto the stack. When the function is over, those values get popped off the stack.
+<cite>umm if you don't know... now you know the wonderful wonderful people at the [[https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html| RustDocs]]</cite>
+</blockquote>
+\\
+\\
+
+== Ownership Rules ==
+  - Each value in Rust has a variable that is called its **OWNER**
+  - There can be only one **OWNER** at a time
+  - When the **OWNER** goes out of scope, the variable is dropped
+
+== Variable Scope == 
+simple shit
+<code rust>
+{ // s is not valid here or before
+   let s = "yolo"; //s is not valid
+   //wow s your so cool cause we can use you for things here!
+} //s has been dropped
+</code>
+
+see, simple. 
+
+== freeing memeory ==
+When we request memory and are done with it. We must free it. Every allocate should be paired with one free of the memory.
+
+Garbage collected languages scan for unused memory periodically and free it.
+Big boi languages expect you to do it yourself. 
+
+**RUST DROPS THAT SHIT WHEN IT GOES OUT OF SCOPE**
+
+== Move ==
+
+With simple types that are stored on the stack. A copy of the data is made when we try to bind it to another variable. **This is a deep copy**
+<code rust>
+let x =2;
+let y=x;
+println!("{}",y);
+println!("{}",x);
+</code>
+that will compile.
+
+However with data stored on the Heap such as a string it would be to time consuming and expensive to run. So rust would just store the pointer to the data in the new variable. 
+\\
+[[https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html|{{:devlogs:string_copy.png?200}}]]
+
+But what if s1 goes out of scope first and the data gets dropped?????????? so when we do something like this rust will just "move" the refrence from s1 to s2 and s1 will go out of scope.
+
+<code rust>
+let s1 = String::from("Shaun");
+let s2 = s1; // s1 has gone out of scope
+println!("{} PauL",s2);
+println!("{} FaiL",s1);
+</code>
+That will not compile.
+
+
+[[https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html|{{:devlogs:string_move.png?200}}]]
+
+by default none of rust's functions will **deep copy** any heap data so you can just assume that it **moves** it.
+
+== Clone ==
+
+If you did wanna **deep copy** heap data. You can clone it. Strings derive clone.
+
+<code rust>
+    let s1 = String::from("hello");
+    let s2 = s1.clone();
+
+    println!("s1 = {}, s2 = {}", s1, s2); //Good job it compiles and you wasted memory!
+    //Copied from the rust book
+</code>
+
+== Copy == 
+
+As with the simple int example above. Simple stack stored traits can be copied and used over again. Even structs that contain these copyable types can be copied. If a type inherits the **drop** trait it cannot be copied.
+
+<wrap lo> things that can be copied : u32,bool,f64,char, moreplscheckthedocs. </wrap>
+
+an (i32,i32) can be copied but a (i32,string) cannot.
+
+== Ownership and Functions == 
+
+its simple
+<code rust>
+
+fn main() {
+    let s = String::from("hello");  // s comes into scope
+
+    takes_ownership(s);             // s's value moves into the function...
+                                    // ... and so is no longer valid here
+
+    let x = 5;                      // x comes into scope
+
+    makes_copy(x);                  // x would move into the function,
+                                    // but i32 is Copy, so it's okay to still
+                                    // use x afterward
+
+} // Here, x goes out of scope, then s. But because s's value was moved, nothing
+  // special happens.
+
+fn takes_ownership(some_string: String) { // some_string comes into scope
+    println!("{}", some_string);
+} // Here, some_string goes out of scope and `drop` is called. The backing
+  // memory is freed.
+
+fn makes_copy(some_integer: i32) { // some_integer comes into scope
+    println!("{}", some_integer);
+} // Here, some_integer goes out of scope. Nothing special happens.
+
+//Copied from the rust book
+</code>
+
+Things that derive copy, get copied into a function. and droppable types get moved.
+Returning stuff follows a similar rule.
+
+<code rust>
+fn main() {
+    let s1 = gives_ownership();         // gives_ownership moves its return
+                                        // value into s1
+
+    let s2 = String::from("hello");     // s2 comes into scope
+
+    let s3 = takes_and_gives_back(s2);  // s2 is moved into
+                                        // takes_and_gives_back, which also
+                                        // moves its return value into s3
+} // Here, s3 goes out of scope and is dropped. s2 was moved, so nothing
+  // happens. s1 goes out of scope and is dropped.
+
+fn gives_ownership() -> String {             // gives_ownership will move its
+                                             // return value into the function
+                                             // that calls it
+
+    let some_string = String::from("yours"); // some_string comes into scope
+
+    some_string                              // some_string is returned and
+                                             // moves out to the calling
+                                             // function
+}
+
+// This function takes a String and returns one
+fn takes_and_gives_back(a_string: String) -> String { // a_string comes into
+                                                      // scope
+
+    a_string  // a_string is returned and moves out to the calling function
+}
+//Taken from the rust docs.. Again please read that. and not this...
+</code>
+
+S1 gets ownership from the functions return.
+
+S2 is moved into the function and then is returend back to s3 
+
+
+
+~~DISCUSSION | Tell me the things I don't want to hear ~~
+
+
+
+ 

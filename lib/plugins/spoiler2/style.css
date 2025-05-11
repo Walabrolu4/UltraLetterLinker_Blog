@@ -1,0 +1,29 @@
+.spoiler {
+	margin-top: 0.5em;
+	margin-bottom: 1em;
+}
+
+.spoiler .title {
+	/*font-size: 90%;
+	font-weight: bold;*/
+	display: block;
+	float: left;
+}
+
+.spoiler .title:after {
+	content: ': ';
+}
+
+.spoiler input {
+	font-size: 70%;
+}
+
+.spoiler .content {
+/* 	border: 1px solid gray;
+	padding: 0.5em; */
+	margin-top: 0.7em;
+	margin-left: 1em;
+	padding-left: 0.5em;
+	border-left: 6px double gray;
+}
+

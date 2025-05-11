@@ -1,0 +1,23 @@
+<span class="sy0">...</span>
+<span class="co1">--running</span>
+<span class="kw1">elseif</span> plr<span class="sy0">.</span>running <span class="kw1">then</span>
+ <span class="kw1">if</span> plr<span class="sy0">.</span>sp <span class="sy0">&gt;</span> run_end<span class="sy0">+</span>quack <span class="kw1">then</span> plr<span class="sy0">.</span>sp <span class="sy0">=</span> run_strt<span class="sy0">+</span>quack 
+ <span class="kw1">elseif</span> plr<span class="sy0">.</span>sp <span class="sy0">&lt;</span> run_strt<span class="sy0">+</span>quack <span class="kw1">then</span> plr<span class="sy0">.</span>sp <span class="sy0">=</span> run_strt<span class="sy0">+</span>quack
+ <span class="kw1">end</span>
+ <span class="kw1">if</span> <span class="kw3">time</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">-</span>plr<span class="sy0">.</span>anim<span class="sy0">&gt;</span><span class="nu0">0.1</span> <span class="kw1">then</span>
+ plr<span class="sy0">.</span>anim <span class="sy0">=</span> <span class="kw3">time</span><span class="br0">&#40;</span><span class="br0">&#41;</span>
+ plr<span class="sy0">.</span>sp<span class="sy0">+=</span><span class="nu0">1</span>
+ <span class="kw1">if</span> plr<span class="sy0">.</span>sp<span class="sy0">&gt;</span><span class="nu0">6</span><span class="sy0">+</span>quack <span class="kw1">then</span>
+ plr<span class="sy0">.</span>sp<span class="sy0">=</span><span class="nu0">1</span><span class="sy0">+</span>quack
+ <span class="kw1">end</span>
+<span class="kw1">end</span>
+&nbsp;
+<span class="co1">--idle</span>
+<span class="kw1">else</span>
+<span class="kw1">if</span> plr<span class="sy0">.</span>sp <span class="sy0">&lt;</span> idle_strt<span class="sy0">+</span>quack <span class="kw1">then</span> plr<span class="sy0">.</span>sp <span class="sy0">=</span> idle_strt<span class="sy0">+</span>quack <span class="kw1">end</span>
+<span class="kw1">if</span> <span class="kw3">time</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">-</span>plr<span class="sy0">.</span>anim<span class="sy0">&gt;</span><span class="nu0">.3</span> <span class="kw1">then</span>
+ plr<span class="sy0">.</span>anim<span class="sy0">=</span><span class="kw3">time</span><span class="br0">&#40;</span><span class="br0">&#41;</span>
+ plr<span class="sy0">.</span>sp<span class="sy0">+=</span><span class="nu0">1</span>
+ <span class="kw1">if</span> plr<span class="sy0">.</span>sp<span class="sy0">&gt;</span><span class="nu0">38</span><span class="sy0">+</span>quack <span class="kw1">then</span>
+  plr<span class="sy0">.</span>sp<span class="sy0">=</span><span class="nu0">33</span><span class="sy0">+</span>quack
+<span class="sy0">....</span>

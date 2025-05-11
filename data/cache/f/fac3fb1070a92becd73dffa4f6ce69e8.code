@@ -1,0 +1,6 @@
+<span class="kw1">struct</span> Duck<span class="br0">&#123;</span>
+ awesomeness<span class="sy0">:</span><span class="kw3">f32</span><span class="sy0">,</span> <span class="co0">//Basic values</span>
+ name<span class="sy0">:</span><span class="br0">&#40;</span>String<span class="br0">&#41;</span><span class="sy0">,</span> 
+ color<span class="sy0">:</span><span class="br0">&#40;</span><span class="kw3">u8</span><span class="sy0">,</span><span class="kw3">u8</span><span class="sy0">,</span><span class="kw3">u8</span><span class="br0">&#41;</span><span class="sy0">,</span> <span class="co0">//Tuples can be stored</span>
+ <span class="co0">//I DONT THING YOU CAN NEST ENUMS..... lmk bois</span>
+<span class="br0">&#125;</span>

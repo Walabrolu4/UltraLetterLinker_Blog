@@ -1,0 +1,77 @@
+====== Sunday, May 15th 2022 ======
+
+==== k =====
+have you play this game? [[https://store.steampowered.com/app/1154810/Going_Under/|this]]. its pretty funny.
+
+===== Collections =====
+
+Collections are like arrays or tuples whose size do not need to be known at compile time. The two types are
+
+  - Vectors
+  - HashMap (like Dictionaries in c#)
+
+
+==== Vectors ==== 
+Vectors are resizable arrays whos length do not need to be known at compile time but the size of its type needs to be known.
+
+You can init a vector with the vec! macro. eg
+
+<code rust> let x = vec![20,50,20]; </code>
+
+You can access a certain element like <del>dish</del> <del>rish</del> **this***
+
+<code rust> println!("{}",x[0]);  </code>
+
+You can iterate through every value like <del>dish</del> <del>rish</del> **this*** ((haha, I'm so quirky))
+
+[[https://doc.rust-lang.org/stable/rust-by-example/std/vec.html|stolen from the rust by example book]]
+<code rust> 
+// `Vector`s can be easily iterated over
+println!("Contents of xs:");
+for v in x.iter() {
+ println!("> {}", x);
+}
+
+// A `Vector` can also be iterated over while the iteration
+// count is enumerated in a separate variable (`i`)
+for (i, v) in x.iter().enumerate() {
+ println!("In position {} we have value {}", i, x);
+}
+
+// Thanks to `iter_mut`, mutable `Vector`s can also be iterated
+// over in a way that allows modifying each value
+for v in xs.iter_mut() {
+ *v *= 3;
+}
+println!("Updated vector: {:?}", xs);
+</code>
+
+==== HashMap ====
+
+Like dictionaries these use key value pairs. 
+
+To make one
+<code rust>
+let mut name_and_age = HashMap::new();
+
+name_and_age.insert("Gassica",22);
+name_and_age.insert("Alex",12);
+
+name_and_age.get("Alex") //ACCESSING THE VALUE
+</code>
+
+You can also insert "entry"
+
+<code rust>
+name_and_age.entry(String::from("thomas")).or_insert(20); //Insert only if unique
+</code>
+
+which is bascially insert if unique. The aims to finish this by may atleast. (given I spend only a little time a week on it) will prollly do some exercizes thru the week without typing my noon-sense.((but typing this is fun fun fun fun)).
+
+{{:devlogs:rustlings_excersizes.png?direct&400|}}
+
+
+
+
+
+  

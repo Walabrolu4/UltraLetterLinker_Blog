@@ -1,0 +1,117 @@
+====== Saturday, 30th April, 2022 ====== 
+
+<wrap lo> This is the first dev log </wrap>
+\\ Today I started this log I guess... The plan is two fold. I want to learn the [[https://bevyengine.org/ | bevy]] framework and also break down super letter linker to try and make an exact copy of it. I am a lazy, so lets see how well this goes!! 🤞🤞🤞
+
+Bevy is a strange engine to me. I do not have any experience with entity component systems but this seems like a cool paradigm.I am mostly using it to use rust to compile down to web assembly. Rust makes me feel like a 90s hacker kid. ((also dokuwiki is pretty cool))
+
+{{:devlogs:ecs_example.png?direct&400|}}
+
+Everything I learn is basically a brain copy pasta of what is on [[https://bevyengine.org/learn/book/getting-started/ | this site]], so your better of reading that but if you so inclined for some god for-saken reason then yea keep reading..... bro. ((AGAIN EVERYTHING YOU READ HERE IS WRONG...jk.......)) ((or am i?))
+
+==== ECS ====
+== Basically I think ==
+
+**Component** : Blocks of data that make sense. eg in bevy:
+<code rust>
+#[derive(Component)]
+struct Person;
+</code>
+
+
+
+**Entity** : the objects them selves. They are made up of components. eg in bevy:
+<code rust>
+commands.spawn().insert(Person).insert(Name("Elaina Protractor".to_string()));
+</code>
+<wrap lo>The above code basically spawns an entity with a person and name component. \\ the name component takes a string as a parameter</wrap>
+
+
+
+**Systems**: Systems transform the data in components. 
+<code rust>
+fn greet_people(query: Query<&Name, With<Person>>){
+    for name in query.iter() {
+        println!("hello {}!", name.0);
+    }
+}
+</code>
+
+<wrap lo>The above code is a system that loops through any entity with the components Name and Person and prints "Hello name"</wrap>
+
+==== Plugins ====
+Plugins are the life of bevy. Everything is a plugin the renderers, UI ect... We can add "DefaultPlugins" to include the basic shtuff and it will also make a window and make the game loop I think...
+
+**To make our own plugin** 
+<code rust> 
+pub struct HelloPlugin;
+
+impl Plugin for HelloPlugin {
+    fn build(&self, app: &mut App) {
+        app.add_startup_system(add_people)
+            .add_system(hello_world)
+            .add_system(greet_people);
+    }
+}
+</code>
+
+==== Resources ====
+Resources are globally unique data of some kind.
+
+<wrap lo> taken directly from book </wrap> \\
+Here are some examples of data that could be encoded as Resources:
+
+  * Elapsed Time
+  * Asset Collections (sounds, textures, meshes)
+  * Renderers
+
+This example takes the above greet_people function and makes it repeat every 2 seconds by using the timer resource that the DefaultPlugins provide
+<code rust>
+fn greet_people(
+    time: Res<Time>, mut timer: ResMut<GreetTimer>, query: Query<&Name, With<Person>>) {
+    // update our timer with the time elapsed since the last update
+    // if that caused the timer to finish, we say hello to everyone
+    if timer.0.tick(time.delta()).just_finished() {
+        for name in query.iter() {
+            println!("hello {}!", name.0);
+        }
+    }
+}
+</code> 
+\\
+
+==== TUTORIAL - Snake ====
+[[https://mbuffett.com/posts/bevy-snake-tutorial/ | following this link]]
+
+I am following this tutorial to make a snake game to get an idea of how games are made in bevy while also seeing wtf rust is about.
+
+== Some interesting snippits ==
+**code for sizing sprites in our tile system**
+<code rust>
+fn size_scaling(windows: Res<Windows>, mut q: Query<(&Size, &mut Transform)>) {
+    let window = windows.get_primary().unwrap();
+    for (sprite_size, mut transform) in q.iter_mut() {
+        transform.scale = Vec3::new(
+            sprite_size.width / ARENA_WIDTH as f32 * window.width() as f32,
+            sprite_size.height / ARENA_HEIGHT as f32 * window.height() as f32,
+            1.0,
+        );
+    }
+}
+</code>
+
+The sizing logic goes like so: if something has a width of 1 in a grid of 40, and the window is 400px across, then it should have a width of 10.
+\\
+\\
+
+Im gonna leave this at here for now and pick it up later
+
+==== External links ====
+[[https://bevyengine.org/examples | examples]] \\
+[[https://docs.rs/bevy/latest/bevy/ | docs]] \\
+[[https://github.com/bevyengine/bevy/blob/latest/examples/games/breakout.rs | breakout source example]] \\
+[[https://bevyengine.org/assets/ | Plugins and Assets]] \\
+[[https://bevy-cheatbook.github.io/ | Cheatbook]] \\ 
+
+~~DISCUSSION | wagsonwasoff~~
+

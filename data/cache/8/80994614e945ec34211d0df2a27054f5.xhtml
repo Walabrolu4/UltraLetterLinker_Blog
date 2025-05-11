@@ -1,0 +1,197 @@
+
+<h1 class="sectionedit1" id="saturday_may_15th_2022">Saturday, May 15th 2022</h1>
+<div class="level1">
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Saturday, May 15th 2022&quot;,&quot;hid&quot;:&quot;saturday_may_15th_2022&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:1,&quot;range&quot;:&quot;1-39&quot;} -->
+<h3 class="sectionedit2" id="worked_on_a_fyoo_more_rustlings_excersizes">Worked on a fyoo more rustlings excersizes</h3>
+<div class="level3">
+
+<p>
+I spent the weekday mostly working and doing other things so I try to spend a couple hours every weekend doing more rustling challenges as it still seems thats getting me to understand the basics of rust better. After I finish rustlings I will go back to looking at bevy. Maybe it will look less cryptic.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Worked on a fyoo more rustlings excersizes&quot;,&quot;hid&quot;:&quot;worked_on_a_fyoo_more_rustlings_excersizes&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:2,&quot;range&quot;:&quot;40-399&quot;} -->
+<h3 class="sectionedit3" id="structs">Structs</h3>
+<div class="level3">
+
+<p>
+Structs hold a bunch of values like tuples. But a struct will have each piece of data named ie: <strong><em class="u">key:value</em></strong> pairs. Structs are pretty powerful as there are no Classes in rust. Structs are used to make “Classes”
+</p>
+<pre class="code rust"><span class="kw1">struct</span> Duck<span class="br0">&#123;</span>
+ awesomeness<span class="sy0">:</span><span class="kw3">f32</span><span class="sy0">,</span> <span class="co0">//Basic values</span>
+ name<span class="sy0">:</span><span class="br0">&#40;</span>String<span class="br0">&#41;</span><span class="sy0">,</span> 
+ color<span class="sy0">:</span><span class="br0">&#40;</span><span class="kw3">u8</span><span class="sy0">,</span><span class="kw3">u8</span><span class="sy0">,</span><span class="kw3">u8</span><span class="br0">&#41;</span><span class="sy0">,</span> <span class="co0">//Tuples can be stored</span>
+ <span class="co0">//I DONT THINK YOU CAN NEST ENUMS..... lmk bois</span>
+<span class="br0">&#125;</span></pre>
+
+<p>
+To use a struct, you can access bits of it using the dot notation.
+</p>
+<pre class="code rust"><span class="kw1">let</span> dave <span class="sy0">=</span> Duck<span class="br0">&#123;</span>
+  awesomeness<span class="sy0">:</span><span class="nu16">100.0</span><span class="sy0">,</span>
+  name<span class="sy0">:</span> String<span class="sy0">::</span><span class="me1">from</span><span class="br0">&#40;</span><span class="st0">&quot;Dave&quot;</span><span class="br0">&#41;</span><span class="sy0">,</span>
+  color<span class="sy0">:</span><span class="br0">&#40;</span><span class="nu0">255</span><span class="sy0">,</span><span class="nu0">255</span><span class="sy0">,</span><span class="nu0">0</span><span class="br0">&#41;</span><span class="sy0">,</span>
+<span class="br0">&#125;</span><span class="sy0">;</span>
+println<span class="sy0">!</span><span class="br0">&#40;</span><span class="st0">&quot;{}&quot;</span><span class="sy0">,</span>dave.name<span class="br0">&#41;</span><span class="sy0">;</span></pre>
+
+</div>
+
+<h5 id="update_syntaxx">Update syntaxx</h5>
+<div class="level5">
+
+<p>
+We (yes, both you and I) can make a new struct that has all the same values as another instance of a struct and then change whatever you want.
+</p>
+<pre class="code rust"><span class="co0">//Given the duck struct above and its instance of dave</span>
+<span class="kw1">let</span> david <span class="sy0">=</span> <span class="br0">&#123;</span>
+ name<span class="sy0">:</span> String<span class="sy0">::</span><span class="me1">from</span><span class="br0">&#40;</span><span class="st0">&quot;Daveed&quot;</span><span class="br0">&#41;</span><span class="sy0">,</span>
+ ..dave
+<span class="br0">&#125;</span></pre>
+
+<p>
+david is the same as dave except for his name! <sup><a href="#fn__1" id="fnt__1" class="fn_top">1)</a></sup>
+</p>
+
+<p>
+Structs can also have functions attached to it. using impl. 
+</p>
+<pre class="code rust"><span class="kw1">impl</span> Duck<span class="br0">&#123;</span>
+ <span class="kw1">fn</span> print_name<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="br0">&#123;</span>
+ println<span class="sy0">!</span><span class="br0">&#40;</span><span class="st0">&quot;{}&quot;</span><span class="sy0">,</span><span class="kw1">self</span>.name<span class="br0">&#41;</span><span class="sy0">;</span>
+ <span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre>
+
+<p>
+this is how you can make a class with structs. The Declaration of the struct is like a C++ header file and the impl like the cpp file <sup><a href="#fn__2" id="fnt__2" class="fn_top">2)</a></sup>. 
+</p>
+
+<p>
+YOU caaaaaan also deconstruct structs but I didnt havtadoit for the exercises so idkfa.
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Structs&quot;,&quot;hid&quot;:&quot;structs&quot;,&quot;codeblockOffset&quot;:0,&quot;secid&quot;:3,&quot;range&quot;:&quot;400-2042&quot;} -->
+<h3 class="sectionedit4" id="enums">Enums</h3>
+<div class="level3">
+
+<p>
+Enums are another grouping of data. One major difference between enums and structs is that with structs you MUST initialize every value when you instance it. With an enum you can only pick one of its possible values while instancing. Usually its used when you have different options and can pick one(variants). <a href="https://github.com/rust-lang/rustlings/tree/main/exercises/enums" class="urlextern" title="https://github.com/rust-lang/rustlings/tree/main/exercises/enums" rel="ugc nofollow">EG FROM THE BOOK</a>
+</p>
+<pre class="code rust"><span class="kw1">enum</span> Message <span class="br0">&#123;</span>
+    ChangeColor<span class="br0">&#40;</span><span class="kw3">u8</span><span class="sy0">,</span><span class="kw3">u8</span><span class="sy0">,</span><span class="kw3">u8</span><span class="br0">&#41;</span><span class="sy0">,</span>
+    Echo<span class="br0">&#40;</span>String<span class="br0">&#41;</span><span class="sy0">,</span>
+    Move<span class="br0">&#123;</span>x<span class="sy0">:</span><span class="kw3">u8</span><span class="sy0">,</span>y<span class="sy0">:</span><span class="kw3">u8</span><span class="br0">&#125;</span><span class="sy0">,</span>
+    Quit<span class="sy0">,</span>
+<span class="br0">&#125;</span></pre>
+
+<p>
+This enum has for variants and each one hold a different type. This way our one message enum can deal with many use cases rather than having different overloaded functions.
+</p>
+
+<p>
+We can use “matching” to go through every value (enumerate) and perform different actions based on the value matched.
+</p>
+<pre class="code rust"> <span class="kw1">let</span> message <span class="sy0">=</span> Message<span class="sy0">::</span><span class="me1">Quit</span><span class="sy0">;</span>
+ <span class="kw1">match</span> message<span class="br0">&#123;</span>
+  Message<span class="sy0">::</span><span class="me1">Move</span><span class="br0">&#123;</span>x<span class="sy0">,</span>y<span class="br0">&#125;</span> <span class="sy0">=&gt;</span> <span class="br0">&#123;</span><span class="kw1">self</span>.move_position<span class="br0">&#40;</span>Point<span class="br0">&#123;</span>x<span class="sy0">,</span>y<span class="br0">&#125;</span><span class="br0">&#41;</span><span class="sy0">;</span><span class="br0">&#125;</span>
+  Message<span class="sy0">::</span><span class="me1">Echo</span><span class="br0">&#40;</span>message<span class="br0">&#41;</span> <span class="sy0">=&gt;</span> <span class="br0">&#123;</span><span class="kw1">self</span>.echo<span class="br0">&#40;</span>message<span class="br0">&#41;</span><span class="sy0">;</span><span class="br0">&#125;</span>
+  Message<span class="sy0">::</span><span class="me1">ChangeColor</span><span class="br0">&#40;</span>h<span class="sy0">,</span>s<span class="sy0">,</span>v<span class="br0">&#41;</span> <span class="sy0">=&gt;</span> <span class="br0">&#123;</span><span class="kw1">self</span>.change_color<span class="br0">&#40;</span><span class="br0">&#40;</span>h<span class="sy0">,</span>s<span class="sy0">,</span>v<span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">;</span><span class="br0">&#125;</span>
+  Message<span class="sy0">::</span><span class="me1">Quit</span> <span class="sy0">=&gt;</span> <span class="br0">&#123;</span><span class="kw1">self</span>.quit<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span><span class="br0">&#125;</span>
+ <span class="br0">&#125;</span></pre>
+
+<p>
+<strong>EZ PZZ</strong> <span class="wrap_lo ">probabbly more nuacnces than that tho</span> <strong>squeeqzy</strong>
+</p>
+
+<p>
+Matches must be <strong>EXHAUSTIVE</strong>.. or rust mama will yell.
+</p>
+
+<p>
+The two other special matching cases are <em class="u">other</em> and <em class="u"></em>_.
+</p>
+
+<p>
+<a href="https://doc.rust-lang.org/book/ch06-02-match.html" class="urlextern" title="https://doc.rust-lang.org/book/ch06-02-match.html" rel="ugc nofollow"> FR☺M THE RUST B☺☺K </a>
+</p>
+<pre class="code rust"><span class="kw1">let</span> dice_roll <span class="sy0">=</span> <span class="nu0">9</span><span class="sy0">;</span>
+<span class="kw1">match</span> dice_roll <span class="br0">&#123;</span>
+ <span class="nu0">3</span> <span class="sy0">=&gt;</span> add_fancy_hat<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">,</span>
+ <span class="nu0">7</span> <span class="sy0">=&gt;</span> remove_fancy_hat<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">,</span>
+ other <span class="sy0">=&gt;</span> move_player<span class="br0">&#40;</span>other<span class="br0">&#41;</span><span class="sy0">,</span>
+<span class="br0">&#125;</span>
+&nbsp;
+<span class="kw1">fn</span> add_fancy_hat<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><span class="br0">&#125;</span>
+<span class="kw1">fn</span> remove_fancy_hat<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><span class="br0">&#125;</span>
+<span class="kw1">fn</span> move_player<span class="br0">&#40;</span>num_spaces<span class="sy0">:</span> <span class="kw3">u8</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><span class="br0">&#125;</span></pre>
+
+<p>
+Here the values 3 and 7 are covered. ALL OTHER VALUES ARE EVALUATED AS OTHER. We can also use _ which kind of does the same thing but will also work with values that are non-valid.
+</p>
+<pre class="code rust"><span class="kw1">let</span> dice_roll <span class="sy0">=</span> <span class="nu0">9</span>
+<span class="kw1">match</span> dice_roll <span class="br0">&#123;</span>
+ <span class="nu0">3</span> <span class="sy0">=&gt;</span> add_fancy_hat<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">,</span>
+ <span class="nu0">7</span> <span class="sy0">=&gt;</span> remove_fancy_hat<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">,</span>
+ _ <span class="sy0">=&gt;</span> <span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">,</span> <span class="co0">// the () is an empty tuple and basically says &quot;Yo, mr.code don't do anything&quot;.</span>
+<span class="br0">&#125;</span>
+&nbsp;
+<span class="kw1">fn</span> add_fancy_hat<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><span class="br0">&#125;</span>
+<span class="kw1">fn</span> remove_fancy_hat<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span><span class="br0">&#125;</span></pre>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Enums&quot;,&quot;hid&quot;:&quot;enums&quot;,&quot;codeblockOffset&quot;:4,&quot;secid&quot;:4,&quot;range&quot;:&quot;2043-4069&quot;} -->
+<h3 class="sectionedit5" id="modules">Modules</h3>
+<div class="level3">
+
+<p>
+Modules help break up code into reusable chunks. Kind of like namespaces.
+</p>
+
+<p>
+<strong>A module is a collection of items: functions, structs, traits, impl and other modules.</strong>
+Creating a module <a href="https://github.com/rust-lang/rustlings/tree/main/exercises/modules" class="urlextern" title="https://github.com/rust-lang/rustlings/tree/main/exercises/modules" rel="ugc nofollow"> FROM RUSTLINGS</a>
+</p>
+<pre class="code rust"><span class="kw1">mod</span> sausage_factory <span class="br0">&#123;</span>
+ <span class="co0">// Don't let anybody outside of this module see this!</span>
+ <span class="kw1">fn</span> get_secret_recipe<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="sy0">-&gt;</span> String <span class="br0">&#123;</span>
+  String<span class="sy0">::</span><span class="me1">from</span><span class="br0">&#40;</span><span class="st0">&quot;Ginger&quot;</span><span class="br0">&#41;</span>
+ <span class="br0">&#125;</span>
+&nbsp;
+ <span class="kw1">pub</span> <span class="kw1">fn</span> make_sausage<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+  get_secret_recipe<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+  println<span class="sy0">!</span><span class="br0">&#40;</span><span class="st0">&quot;sausage!&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+ <span class="br0">&#125;</span>
+<span class="br0">&#125;</span>
+&nbsp;
+<span class="kw1">fn</span> main<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+    sausage_factory<span class="sy0">::</span><span class="me1">make_sausage</span><span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span>
+<span class="br0">&#125;</span></pre>
+
+<p>
+Another thing we can do with modules is bring them into scope to use them with shorthand names. This can be done with the <strong>use .. as</strong> syntax.
+</p>
+<pre class="code rust"><span class="kw1">use</span> std<span class="sy0">::</span><span class="me1">time</span><span class="sy0">::</span><span class="me1">UNIX_EPOCH</span> <span class="kw1">as</span> UNIX_EPOCH<span class="sy0">;</span>
+<span class="kw1">use</span> std<span class="sy0">::</span><span class="me1">time</span><span class="sy0">::</span><span class="me1">SystemTime</span> <span class="kw1">as</span> SystemTime<span class="sy0">;</span>
+&nbsp;
+<span class="kw1">fn</span> main<span class="br0">&#40;</span><span class="br0">&#41;</span> <span class="br0">&#123;</span>
+ <span class="kw1">match</span> SystemTime<span class="sy0">::</span><span class="me1">now</span><span class="br0">&#40;</span><span class="br0">&#41;</span>.duration_since<span class="br0">&#40;</span>UNIX_EPOCH<span class="br0">&#41;</span> <span class="br0">&#123;</span>
+  Ok<span class="br0">&#40;</span>n<span class="br0">&#41;</span> <span class="sy0">=&gt;</span> println<span class="sy0">!</span><span class="br0">&#40;</span><span class="st0">&quot;1970-01-01 00:00:00 UTC was {} seconds ago!&quot;</span><span class="sy0">,</span> n.as_secs<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy0">,</span>
+  Err<span class="br0">&#40;</span>_<span class="br0">&#41;</span> <span class="sy0">=&gt;</span> panic<span class="sy0">!</span><span class="br0">&#40;</span><span class="st0">&quot;SystemTime before UNIX EPOCH!&quot;</span><span class="br0">&#41;</span><span class="sy0">,</span>
+ <span class="br0">&#125;</span>
+<span class="br0">&#125;</span></pre>
+
+<p>
+Yea man thats basically about it… why are you <sup><a href="#fn__3" id="fnt__3" class="fn_top">3)</a></sup>
+</p>
+
+</div>
+<!-- EDIT{&quot;target&quot;:&quot;section&quot;,&quot;name&quot;:&quot;Modules&quot;,&quot;hid&quot;:&quot;modules&quot;,&quot;codeblockOffset&quot;:8,&quot;secid&quot;:5,&quot;range&quot;:&quot;4070-&quot;} --><div class="footnotes">
+<div class="fn"><sup><a href="#fnt__1" id="fn__1" class="fn_bot">1)</a></sup> 
+<div class="content">please note that this is true only on a surface level, as when we dive deeper we will find david and dave to be exeptionally unique ducks. Dave is a painter and David is a lover. Just like anyone. we are more than just our <strong><em class="u">key:value</em></strong> pairs. We are <strong><em class="u">key:value:feelings</em></strong> pears.</div></div>
+<div class="fn"><sup><a href="#fnt__2" id="fn__2" class="fn_bot">2)</a></sup> 
+<div class="content">not really</div></div>
+<div class="fn"><sup><a href="#fnt__3" id="fn__3" class="fn_bot">3)</a></sup> 
+<div class="content"><a href="https://www.youtube.com/watch?v=2HOClc6Svg4" class="urlextern" title="https://www.youtube.com/watch?v=2HOClc6Svg4" rel="ugc nofollow">here</a></div></div>
+</div>
