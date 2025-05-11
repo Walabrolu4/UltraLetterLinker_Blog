@@ -2,7 +2,7 @@
 
 This blog was made using dokuwiki, It was supposed to be a copy of "SuperLetterLinker" by bigfishgames
 The game was supposed to be made in the RUST programming language but I had started learning it and given up.
-Someday....
+Someday...
 
 
 All documentation for DokuWiki is available online
